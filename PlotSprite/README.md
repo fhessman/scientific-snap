@@ -1,11 +1,14 @@
 <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/>
 
 Plotting
---------
+========
 
 One of the foundations of Snap!, like Scratch, is the Logo-like use of "turtle graphics" - simple pen-based drawing.  However, there is no generic means of displaying data graphically, something which is desperately needed when using Snap! for scientific or mathematical purposes.
 
 PlotSprite, created by Eckart Modrow, displays data in the form of simple lists of (x,y) data pairs and can also display functions of the x-axis.  The current model is to load PlotSprite into your project and create additional internal and global PlotSprite methods for dealing with various plotting tasks.  Client Sprites can then invoke the global methods and PlotSprite can respond to global messages (e.g. the classic "green flag" start message).
+
+Example
+-------
 
 As an example, let's create a simple set of data: when we define a global "xydata" variable and press the following blocks
 
@@ -43,6 +46,9 @@ we get
 
 ![plot of data](./images/plot.png)
 
-
 Of course, we could have create a "plot data" block instead of responding to a "plot data" broadcast message.
+
+Note that we could not have created this block outside of the PlotSprite, since we used private blocks (the ones with the "location" and "poster" icons at the start of the block).
+
+This example is available here as Example.xml
 
