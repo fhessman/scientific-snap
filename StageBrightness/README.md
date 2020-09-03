@@ -16,7 +16,7 @@ Because this conversion is compute-intensive, it is good to limit the area which
 
 ![set stage brightness area](./images/set_stage_brightness_area.png)
 
-that stores this information in a global variable called **"stage brightness area"** consisting of a list with the values *(xmin,xmax,ymin,ymax)* in pixel units (**NOT that of the *Snap!* *Stage* **).
+that stores this information in a global variable called **"stage brightness area"** consisting of a list with the values *(xmin,xmax,ymin,ymax)* in *Snap!* *Stage* units where the centre is at (0,0).
 
 ![stage brightness area](./images/stage_brightness_area.png)
 
@@ -31,7 +31,7 @@ Here is an example of how to use the stage brightness blocks.  We first fill the
 * Rename the new costume "black" so one can reference it later.
 Now we can paste something onto the *Stage* for to observe.
 * Select or create a generic Sprite with the generic arrow costume and position the arrow at the centre of the Stage.
-* Press the "paste on .." block to paste the generic arrow costume onto the *Stage*. ![Pen paste on block](paste_on_Stage.png)
+* Press the "paste on .." block to paste the generic arrow costume onto the *Stage*. ![paste on stage](./images/paste_on_Stage.png)
 * Set the **stage brightness area** to some reasonable value.
 * Pull out a "gray value of stage" block from the "Sensing" block menu onto the workspace.
 * Press the block so that it can report its value.
