@@ -1,4 +1,4 @@
-![scientific-snap-icon](../images/einstein_snap.png)
+<img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/>
 scientific-snap
 ===============
 
@@ -11,5 +11,5 @@ PlotSprite displays data in the form of simple lists of (x,y) data pairs.  The c
 
 As an example, let's create a simple set of data:
 
-<img scr="./images/create_data.png" height="50" alt="scientific-snap icon">
+<img scr="./images/create_data.png" height="50" alt="block that creates data"/>
 
