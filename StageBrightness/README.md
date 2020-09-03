@@ -1,4 +1,4 @@
-# <img alt="scientific-snap-icon" src="../images/einstein_snap.png"/> StageBrightness
+# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> StageBrightness
 
 There are many examples of scientific phenomenon which cannot be seen directly, but only via the observation of some indirect measure.  For example, in astrophysics, most stellar phenomena are not directly visible simply because the stars are so far away - one can only observe the amount of light coming from them. *Snap!*'s graphical capabilities makes it simple to create simulations of what is going on but cannot be seen directly, so one merely needs to be able to "observe" what is happening on the *Stage*.  The result is the current average "brightness" or "colour" of the *Stage*, normalized to the brightness or colour of a typical 8-bit pixel.
 
