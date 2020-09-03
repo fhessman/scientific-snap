@@ -7,7 +7,7 @@ One of the foundations of Snap!, like Scratch, is the Logo-like use of "turtle g
 
 PlotSprite, created by Eckart Modrow, displays data in the form of simple lists of (x,y) data pairs and can also display functions of the x-axis.  The current model is to load PlotSprite into your project and create additional internal and global PlotSprite methods for dealing with various plotting tasks.  Client Sprites can then invoke the global methods and PlotSprite can respond to global messages (e.g. the classic "green flag" start message).
 
-As an example, let's create a simple set of data: when we press the following blocks
+As an example, let's create a simple set of data: when we define a "xydata" variable and press the following blocks
 
 ![block that creates data](./images/create_data.png)
 
@@ -15,11 +15,25 @@ we get a corresponding list of (x,y) values (here, a simple sine function):
 
 ![created sine function data](./images/created_data.png)
 
-After importing PlotSprite.xml into our project, we create an internal reaction to a global "green flag" starting message, consisting of the initialization of a plot (definition of the plot boundaries and setting the line and marker properties)
+After importing PlotSprite.xml into our project, let us create an internal reaction to a global "plot data" message, consisting of the response header
 
-![plot initialization](./images/plot_initialization.png)
+![respond to plot data message](./images/when_I_receive_plot_data.png)
 
-and 
+the creation of a new plot costume (the width, height, and colour of the frame used for plotting)
+
+![create a plot costume](./images/new_costume.png)
+
+the initialization of the plot (definition of the plot boundaries and setting the line and marker properties)
+
+![plot initialization](./images/plot_properties.png)
+
+and the actual plotting of the global data list
+
+![create plot of data](./images/create_plot.png)
+
+When we send the message to PlotSprite (having already created the data), we get
+
+![plot of data](./images/plot.png)
 
 
 
