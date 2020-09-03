@@ -38,5 +38,5 @@ Now we can paste something onto the *Stage* for to observe.
 * Press the "paste on .." block to paste the generic arrow costume onto the *Stage*. ![paste on stage](./images/paste_on_Stage.png)
 * Set the **stage brightness area** to some reasonable value.
 * Pull out a "gray value of stage" block from the "Sensing" block menu onto the workspace.
-* Press the block so that it can report its value.
-* Do the same with the "colour of stage" block.
+* Press the block so that it can report its value. ![gray value report](./images/gray_report.png)
+* Do the same with the "colour of stage" block. ![colour report](./images/colour_report.png)
