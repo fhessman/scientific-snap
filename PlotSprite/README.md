@@ -44,11 +44,25 @@ and broadcast the message to PlotSprite (having already created the data)
 
 we get
 
-![plot of data](./images/plot.png)
-
-Of course, we could have create a "plot data" block instead of responding to a "plot data" broadcast message.
+![line plot of data](./images/line_plot.png)
 
 Note that we could not have created this block outside of the PlotSprite, since we used private blocks (the ones with the "location" and "poster" icons at the start of the block).
+
+Of course, we could have create a "plot" block instead of responding to a "plot data" broadcast message.
+
+![a plot block](./images/plot_block.png)
+
+Note that here, the PlotSprite uses markers and no lines, whereas before it used both.  The other Sprites would then create a plot not by broadcasting a "plot data" message but by directly invoking the "plot" block with it's argument containing the data to be plotted, either by using the "run" block with a passed argument
+
+![run the plot block](./images/run_plot.png)
+
+or by directly asking the PlotSprite to run it's "plot" block with the data argument.
+
+![tell the PlotSprite to run the plot block](./images/tell_run_plot.png)
+
+The result is a slightly different plot:
+
+![marker plot of data](./images/marker_plot.png)
 
 This example is available here as Example.xml
 
