@@ -12,11 +12,17 @@ The [stage\_brightness.xml](./stage_brightness.xml) "sensing" blocks read some s
 
 (a list of the floating point RGB values between 0. and 255.).
 
-Because this conversion is compute-intensive, it is good to limit the area which is used: the default is a 200x200 pixel area centered at the centre).  In order to change the boundaries of this area, there is a (global) sensing block called ""set stage brightness area"
+Because this conversion is compute-intensive, it is good to limit the area which is used: the default is a 200x200 pixel area centered at the centre).  In order to change the boundaries of this area, there is a (global) sensing block called "set stage brightness area"
 
 ![set stage brightness area](./images/set_stage_brightness_area.png)
 
 that stores this information in a global variable called **"stage brightness area"** consisting of a list with the values *(xmin,xmax,ymin,ymax)* in pixel units (**NOT that of the *Snap!* *Stage* **).
+
+![stage brightness area](./images/stage_brightness_area.png)
+
+---
+
+## Example
 
 Here is an example of how to use the stage brightness blocks.  We first fill the *Stage* with a totally black background costume so that the reported *Stage* brightness will reflect whatever else we do.
 * Select the *Stage* Sprite.
