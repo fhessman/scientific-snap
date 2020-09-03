@@ -16,7 +16,7 @@ where GM is the product of Newton's gravitational constant and the mass of the c
 
 When the derivatives are replaced with simple differences - something any school child can understand who understands the concepts of speed and acceleration - one can express the x- and y-components as
 
-![ax and ay](./images/ax_ay.png =100x)
+![ax and ay](./images/ax_ay.png)
 
 where ![delta t](./images/deltat.png) is the time-step between each iteration.  Similarly, the velocity and position differences every iteration are
 
@@ -26,7 +26,7 @@ The value of GM and the initial velocities and positions are fixed before the si
 
 ## Translation into Snap!
 
-First, we must identify the variables of interest. Then, we can either define Snap! variables as global variables for all blocks and Sprites, or we can assume that the simulation will occur after it is started by a "green flag" broadcast.  Since the latter is more compact, we'll adopt the latter.
+First, we must identify the variables of interest, remembering that every Snap! Sprite already comes with variables for the x- and y-positions. Then, we can either define Snap! variables as global variables for all blocks and Sprites, or we can assume that the simulation will occur after it is started by a "green flag" broadcast.  Since the latter is more compact, we'll adopt the latter.
 
 ![initialization](./images/variables.png)
 
