@@ -11,5 +11,5 @@ PlotSprite displays data in the form of simple lists of (x,y) data pairs.  The c
 
 As an example, let's create a simple set of data:
 
-![Snap! blocks creating a list of (x,y) data pairs](./images/create_data.png)
+<img scr="./images/create_data.png" height="50" alt="scientific-snap icon">
 
