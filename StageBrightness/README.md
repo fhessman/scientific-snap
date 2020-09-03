@@ -4,7 +4,7 @@ There are many examples of scientific phenomenon which cannot be seen directly, 
 
 The [stage\_brightness.xml](./stage_brightness.xml) "sensing" blocks read some sub-image of the *Stage* and converts the pixel values into either a mean gray value
 
-![brightness of stage](./images/brightness_of_stage.png)
+![gray value of stage](./images/gray_value_of_stage.png)
 
 (a floating point number between 0.-255.) or the mean colour
 
