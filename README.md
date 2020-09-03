@@ -1,3 +1,4 @@
+![scientific-snap-icon](images/einstein_snap.png)
 scientific-snap
 ===============
 
