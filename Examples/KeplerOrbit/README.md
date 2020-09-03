@@ -1,6 +1,6 @@
-# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> Example: Kepler Orbit
+# <img alt="scientific-snap-icon" src="../../images/einstein_snap.png" width="50"/> Example: Kepler Orbit
 
-The simulation of an object in orbit around a large mass - the classic Keplerian 2-body  problem where the massive body is motionless - is easily done in scientific *Snap!*.  The only tricky part is understandin the few equations to be solved.
+The simulation of an object in orbit around a large mass - the classic Keplerian 2-body  problem where the massive body is motionless - is easily done in scientific *Snap!*.  The only tricky part is understanding the few equations to be solved.
 
 ## Simple Theory
 
@@ -16,7 +16,7 @@ where GM is the product of Newton's gravitational constant and the mass of the c
 
 When the derivatives are replaced with simple differences - something any school child can understand who understands the concepts of speed and acceleration - one can express the x- and y-components as
 
-![ax and ay](./images/ax_ay.png)
+![ax and ay](./images/ax_ay.png =100x)
 
 where ![delta t](./images/deltat.png) is the time-step between each iteration.  Similarly, the velocity and position differences every iteration are
 
@@ -40,7 +40,7 @@ and the x-velocity is easily modified using
 
 ![vx-change](./images/change_vx_by.png)
 
-Pack all of them into an infinite loop
+and in the "Motion" block menu there's a block all ready to do the same to the x-coordinate.  Pack all of the translations into an infinite loop
 
 ![infinite loop](./images/forever.png)
 
