@@ -22,6 +22,10 @@ that stores this information in a global variable called **"stage brightness are
 
 ---
 
+These blocks were developed for the EclipsingBinary and ExoplanetTransit simulation examples.
+
+---
+
 ## Example
 
 Here is an example of how to use the stage brightness blocks.  We first fill the *Stage* with a totally black background costume so that the reported *Stage* brightness will reflect whatever else we do.
