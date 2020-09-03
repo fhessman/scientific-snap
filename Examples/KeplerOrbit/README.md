@@ -12,7 +12,9 @@ the accelerations on the body are
 
 ![accelerations](./images/accelerations.png)
 
-where GM is the product of Newton's gravitational constant and the mass of the central body.  When the derivatives are replaced with simple differences - something any school child can understand who understands the concepts of speed and acceleration - one can express the x- and y-components as
+where GM is the product of Newton's gravitational constant and the mass of the central body: this quantity determines how strong the gravitational forces are and hence how quickly things happen.
+
+When the derivatives are replaced with simple differences - something any school child can understand who understands the concepts of speed and acceleration - one can express the x- and y-components as
 
 ![ax and ay](./images/ax_ay.png)
 
@@ -30,16 +32,20 @@ First, we must identify the variables of interest. Then, we can either define Sn
 
 We'll use Snap! coordinates and assume the time is simply measured in terms of computer time, so the value of GM and the initial velcities will be chosen simply to make things work nicely.
 
-Next, we replace the above equations with their Snap! equivalents
+Next, we replace the above equations with their Snap! equivalents.  The equation for the x-accelation is simply
 
-![equations](./images/equations.png)
+![x-acceleration](./images/set_ax_to.png)
 
-and pack them into an infinite loop
+and the x-velocity is easily modified using
+
+![vx-change](./images/change_vx_by.png)
+
+Pack all of them into an infinite loop
 
 ![infinite loop](./images/forever.png)
 
-In order to make the simulation "pretty", we should make the background colour of the Stage black (create a black costume with the drawing tools) and give our "planet" Sprite a planet-like costume (find a nice planet image on the internet, replace the background with a transparent alpha-channel and make it the costume of the Sprite).
+In order to make the simulation "pretty", we should make the background colour of the Stage black (create a black costume with the drawing tools) and give our "planet" Sprite a planet-like costume (find a nice planet image on the internet, replace the background with a transparent alpha-channel and make it the costume of the Sprite).  One can, of course, add a "Sun" Sprite and place it at (0,0) so the "planet" has something to orbit around.
 
 Finally, it is nice to see the shape of the orbit: before placing the planet Sprite at its initial position, raise the pen, set the pen colour, move the Sprite, and then lower the pen again: thereafter, the planet will leave a trail showing it's path.
 
-Put everything together and the simultion should produce a fairly accurate elliptical (GM and velocities chosen well) orbit where the planet Sprite moves around the centre or a hyperbolic orbit (GM and/or velocities chosen too large) where the planet Sprite quickly disappears.  More interesting is the question about the accuracy of the simulation: we haven't insured the conservation of energy or momentum, so if our integration is too crude (too big a time-step), then the orbit won't be Keplerian.
+Put everything together and the simultion should produce a fairly accurate elliptical (if the value of GM and velocities were chosen well) orbit where the planet Sprite moves around the centre or a hyperbolic orbit (GM and/or velocities chosen too large) where the planet Sprite quickly disappears.  More interesting is the question about the accuracy of the simulation: we haven't insured the conservation of energy or momentum, so if our integration is too crude (too big a time-step), then the orbit won't be Keplerian.
