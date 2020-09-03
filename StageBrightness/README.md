@@ -1,9 +1,4 @@
-![scientific-snap-icon](../images/einstein_snap.png)
-scientific-snap
-===============
-
-StageBrightness
----------------
+# <img alt="scientific-snap-icon" src="../images/einstein_snap.png"/> StageBrightness
 
 There are many examples of scientific phenomenon which cannot be seen directly, but only via the observation of some indirect measure.  For example, in astrophysics, most stellar phenomena are not directly visible simply because the stars are so far away - one can only observe the amount of light coming from them. Snap!'s simple graphical capabilities makes it simple to create simulations of what is going on but cannot be seen directly, so one merely needs to be able to "observe" what is happening on the Stage.
 

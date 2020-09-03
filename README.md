@@ -1,9 +1,6 @@
-![scientific-snap-icon](images/einstein_snap.png)
-scientific-snap
-===============
+# <img alt="scientific-snap icon" src="./images/einstein_snap.png" width="50"/> Scientific Snap!
 
-Motivation
-----------
+## Motivation
 
 Graphical programming languages like Scratch, GP, and Snap! have enabled school children and amateurs to explore the world of computer programming while having a lot of fun at the same time. Scratch, the father of Snap!, was designed to help children create fun computer graphics and games and so inherited the "turtle"-based graphics from the grandfather of graphic-capable educational languages, Logo. Snap! took Scratch's graphical interface but implemented a deeper and more powerful underlying computing infrastructure and made it possible to work fully within a browser window, relieving educators from the onerous task of installing software.
 
@@ -12,3 +9,5 @@ Although Snap! is now used at the Univ. of Berkeley to teach undergraduate intro
 With Snap!, school classes can be enabled to produce their own scientific simulations or process sensor data using standard scientific techniques without the additional baggage of having to learn a complex computer language with a non-intuitive user interface. All Snap! needs, in addition to the standard set of computing tools, is a means of easily accessing, processing, and displaying data, as well as additional tools to make scientific simulations simpler and more powerful.
 
 The purpose of this git project is to give a home for the collection of such resources as well as to collect examples of how such projects can be done.
+
+E. Modrow and F.V. Hessman (2020-SEP-03)
