@@ -49,3 +49,7 @@ In order to make the simulation "pretty", we should make the background colour o
 Finally, it is nice to see the shape of the orbit: before placing the planet Sprite at its initial position, raise the pen, set the pen colour, move the Sprite, and then lower the pen again: thereafter, the planet will leave a trail showing it's path.
 
 Put everything together and the simultion should produce a fairly accurate elliptical (if the value of GM and velocities were chosen well) orbit where the planet Sprite moves around the centre or a hyperbolic orbit (GM and/or velocities chosen too large) where the planet Sprite quickly disappears.  More interesting is the question about the accuracy of the simulation: we haven't insured the conservation of energy or momentum, so if our integration is too crude (too big a time-step), then the orbit won't be Keplerian.
+
+What can you do with the simulation, other than enjoy seeing the planet doing it's celestial rounds?
+- Try to confirm Kepler's three "laws": (1) the closed orbits are ellipses; (2) the planet moves faster the closer it is to the central body (actually, the area traced out by the radius segment is equal in equal amounts of time); (3) the square of the period is proportional to the cube of the mean radius.  
+- Try using the [PlotSprite](../../PlotSprite) to show the orbital properties graphically.
