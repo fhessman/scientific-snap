@@ -20,6 +20,12 @@ that stores this information in a global variable called **"stage brightness are
 
 ![stage brightness area](./images/stage_brightness_area.png)
 
+Of course, it's good to know exactly where the area is that is being measured, so there's a
+
+![tell sprite to draw brightness area](./images/tell_sprite_to_draw_brightness_area.png)
+
+Simply give some Sprite capable of drawing as the argument (**not** the Stage!), since in *Snap!*, only Sprites can draw.  The red box drawn around the stage brightness area is just outside so it won't be measured.
+
 ---
 
 These blocks were developed for the EclipsingBinary and ExoplanetTransit simulation examples.

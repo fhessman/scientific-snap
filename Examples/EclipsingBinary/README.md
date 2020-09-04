@@ -82,10 +82,10 @@ If all that we're interested in is the range of values (e.g. to determine the de
 
 Finally, we want a plotted lightcurve.  Import the [PlotSprite](../../PlotSprite) and give it a new **internal** block called "plot"
 
-![plot block](../images/plot.png)
+![plot block](./images/plot.png)
 
 This block uses the global lightcurve data list, gives the plot reasonable limits and labels, and creates a new plot costume for itself.  To invoke the plot, simply ask the *PlotSprite* to run it's plot block
 
-![run plot of PlotSprite](../images/run_plot_of_PlotSprite.png)
+![run plot of PlotSprite](./images/run_plot_of_PlotSprite.png)
 
 If you put this block into the infinite loop, the plot will be dynamically created, a new data-point being added each time the *Stage* brightness is measured.
