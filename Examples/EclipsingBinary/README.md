@@ -23,12 +23,16 @@ For each time iteration,
 - place the stars at their respective apparent positions;
 - measure the brightness of the two, including the effects of mutual eclipses.
 
+---
+
 ## Translation into Snap!
 
 Snap! makes it easy to split the simulation into different sections and to develop (and debug!) them in simple stages.  For simplicity, we can split the simulation into three different major tasks:
 - for every orbital phase, place the stars at the correct positions relative to their centres-of-mass, and make sure that the correct star is placed in front or back of the other one;
 - measure the brightness of the simulation;
 - plot the brightness as a function of orbital phase.
+
+---
 
 ### Placing the stars on the Snap! *Stage*
 
@@ -60,6 +64,8 @@ Now, for each calculated time, we can compute a phase and, for that phase, move 
 
 You will have noticed that it matters what order the Sprites are displayed: the primary should eclipse the secondary at phase 0 but be eclipsed by the secondary at phase 180 degrees.  Stick in an "if ... then ..." control block and duplicate  your positioning blocks, switching the order for the primary and secondary for 1/2 of the orbit.
 
+---
+
 ### Measuring the brightness of the simulation
 
 Once your simulation runs as expected, we want to calculate the apparent brightness as a function of orbital phase.  This can be easily done using the [stage brightness](../../StageBrightness)  blocks:
@@ -77,10 +83,11 @@ If all that we're interested in is the range of values (e.g. to determine the de
 
 ![minmax block](./images/min_max_block.png)
 
+---
 
 ### Plotting the brightness as a function of orbital phase
 
-Finally, we want a plotted lightcurve.  Import the [PlotSprite](../../PlotSprite) and give it a new **internal** block called "plot"
+Finally, we want a plotted lightcurve.  Import the [PlotSprite](../../PlotSprite) and give it a new **internal** (!) block called "plot"
 
 ![plot block](./images/plot.png)
 
@@ -89,3 +96,14 @@ This block uses the global lightcurve data list, gives the plot reasonable limit
 ![run plot of PlotSprite](./images/run_plot_of_PlotSprite.png)
 
 If you put this block into the infinite loop, the plot will be dynamically created, a new data-point being added each time the *Stage* brightness is measured.
+
+---
+
+## Making your simulation more realistic
+
+While this simulation is good, the lightcurves you produce will not be realistic.  That's because real stars are not uniformly bright discs: the edges of the stars are less bright, an effect called "limb-darkening".  This effect is due to the fact that stars are not solid objects but have atmospheres with layers that get thicker, genneraly hotter, and less transparent as one looks deeper and deeper in the star.  At the centre of the star, one can look fairly deeply before the star becomes opaque, but the line-of-sight near the limb encounters more material at higher levels and so becomes opaque where the atmosphere is generally cooler.  Cooler gas emits less light so the limb appears to be darker, giving the disc an artificial 3-D look.
+
+![Sun](../images/Sun.png)
+
+(derived from https://en.wikipedia.org/wiki/Sun#/media/File:Sun_white.jpg; the background has been removed).  While one could attempt to paint such a disc, the simpler and physically **MUCH** better solution is to take the image of a **REAL** star - i.e. the Sun -- which shows the correct limb darkening behavior **by definition**.  This makes your simulation more realistic than some astronomy graduate students' attempts!
+
