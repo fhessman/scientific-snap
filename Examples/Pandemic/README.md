@@ -18,7 +18,7 @@ The modelling of the evolution of pandemics is one of the central tools used in 
 
 ---
 
-# The Snap! Simulation
+### The Snap! Simulation
 
 Our simulation needs the following basic parameters:
 
@@ -35,11 +35,14 @@ All of the details for each of the persons - their position and motion, the act 
 - creates an infected PersonSprite;
 - creates a large number of healthy PersonSprite clones;
 - enters an infinite loop where each PersonSprite clone is told to move and check for infections.
+
 ![create clones](./images/create_clones.png)
 
-Before we begin, note that we are going to be dealing with probabilities, so it would be handy to have a real random number generator that returns a number between 0 and 1 (the standard Snap! ![pick random](./images/pick_random.png) block only returns whole numbers within some whole number range) like
+Before we begin, note that we are going to be dealing with probabilities, so it would be handy to have a real random number generator that returns a number between 0 and 1
+
 ![random](./images/random.png)
-(here with a finite but adequate resolution of 0.0001).
+
+here with a finite but adequate resolution of 0.0001 (the standard Snap! ![pick random](./images/pick_random.png) block only returns whole numbers within some whole number range)
 
 When a clone of PersonSprite is created, it needs to
 - place itself randomly on the Stage;
@@ -49,13 +52,15 @@ When a clone of PersonSprite is created, it needs to
 - set the costume to a "healthy" appearance.
 
 The PersonSprite needs to respond to two different broadcasts, "remove all persons"
-![remove all persons](./images/remove_all_persions.png)
+
+![remove all persons](./images/remove_all_persons.png)
+
 and "next", the iteration message from the simulation.  For every "next", the PersonSprite should
 - turn randomly by some amount, either left or right;
 - move forward some steps;
 - check to see if the edge was reached - Snap! provides a handy ![if on edge, bounce](./images/if_on_edge_bounce.png) block that will send the Sprite back into the Stage if it tries to exit;
 - if the person is "healthy", she should check to see if there are any "neighbors" (a standard function in Snap! that returns a list of Sprites within a distance of ??? so that one doesn't have to test ALL of the Sprites on the Stage);
-- if there are neighbors within the infection distance, ask if they are "infectious" and use the ![random](./images/random.png) block to see if an infection occurs;
+- if there are neighbors within the infection distance, ask if they are "infectious" and use the ![random](./images/random_block.png) block to see if an infection occurs;
 - if the person is infected, set the infection timer and change the costume to an "infectious" appearance (e.g. a red colour);
 - no matter whether an infection occured or not, if the person's infection timer is > 0, reduce it by one.
 - if the infection timer is set to zero, then the infectious time is over - the patient is now "recouperated" and no longer a danger to the "healthy" persons.
@@ -64,11 +69,11 @@ and "next", the iteration message from the simulation.  For every "next", the Pe
 
 ---
 
-## Using your simulation
+### Using your Simulation
 
 Once your simulation runs, you can see how the different parameters of the disease affect the evolution of the pandemia.
 - How do masks help (change the probability of infection)?
 - How does social distancing help (change the infection distance: a smaller value is, strangely enough, like social distancing, since it makes it harder to get infected)?
 - How do the parameters affect the ability of the population to achieve "herd immunity" (just "healthy" and "recouperated" persons) and at what cost (number of persons that died)?
 - Change the random motion to directed motion (e.g. the persons only move between airports) - how does this change the results?
-
+- Add some book-keeping of what happens during your pandemic and use [PlotSprite](../../PlotSprite) so that you can plot the number of infections/deaths as a function of time.
