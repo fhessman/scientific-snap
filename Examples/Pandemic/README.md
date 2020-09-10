@@ -4,9 +4,7 @@ This being the year 2020, we'll see how to simulate the evolution of a pandemic.
 
 ---
 
-<center>
 ![pandemic simulation](./images/simulation.png)
-</center>
 
 ---
 
@@ -35,23 +33,17 @@ All of the details for each of the persons - their position and motion, the act 
 - gives the basic parameters their values;
 - removes any left-over PersonSprites from the last simulation, e.g. via a broadcast
 
-<center>
 ![broadcast remove all persons](./images/broadcast_remove_all_persons.png)
-</center>
 
 - creates an infected PersonSprite;
 - creates a large number of healthy PersonSprite clones;
 - enters an infinite loop where each PersonSprite clone is told to move and check for infections.
 
-<center>
 ![create clones](./images/create_clones.png)
-</center>
 
 Before we begin, note that we are going to be dealing with probabilities, so it would be handy to have a real random number generator that returns a number between 0 and 1
 
-<center>
 ![random](./images/random.png)
-</center>
 
 here with a finite but adequate resolution of 0.0001 (the standard Snap! ![pick random](./images/pick_random.png) block only returns whole numbers within some whole number range)
 
@@ -64,9 +56,7 @@ When a clone of PersonSprite is created, it needs to
 
 The PersonSprite needs to respond to two different broadcasts, "remove all persons"
 
-<center>
-![remove all persons](./images/remove_all_persons.png)
-</center>
+![broadcast remove all persons](./images/broadcast_remove_all_persons.png)
 
 and "next", the iteration message from the simulation.  For every "next", the PersonSprite should
 - turn randomly by some amount, either left or right;
@@ -79,9 +69,7 @@ and "next", the iteration message from the simulation.  For every "next", the Pe
 - if the infection timer is set to zero, then the infectious time is over - the patient is now "recouperated" and no longer a danger to the "healthy" persons.
 - if the person is "infectious", there is a finite chance of succuming to the disease, in which case the clone is removed.
 
-<center>
 ![if random death](./images/if_random_death.png)
-</center>
 
 ---
 
