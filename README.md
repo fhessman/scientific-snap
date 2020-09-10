@@ -11,3 +11,9 @@ With Snap!, school classes can be enabled to produce their own scientific simula
 The purpose of this git project is to give a home for the collection of such resources as well as to collect examples of how such projects can be done.
 
 E. Modrow and F.V. Hessman (2020-SEP-03)
+
+---
+
+## Installation
+
+You can retrieve the whole package using the usual git methods, but then you'll be downloading all of the example documents and their images as well.  If you are only interested in the blocks and/or Sprites, make your way to where the XML files are listed.  DO NOT try to download using the shown link: it points to a further HTML file, not to the XML file itself.  Press the link and you'll see the beginnings of the XML.  Press the "Raw" button so that only the XML is displayed in your window and save this text as your <tt>\*.xml</tt> file.
