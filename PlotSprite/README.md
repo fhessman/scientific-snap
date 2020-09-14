@@ -1,8 +1,23 @@
-# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> PlotSprite
+# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> PlotSprite (v0.2)
 
 One of the foundations of *Snap!*, like *Scratch*, is the *Logo*-like use of "turtle graphics" - simple pen-based drawing.  However, there is no generic means of displaying data graphically, something which is desperately needed when using *Snap!* for scientific or mathematical purposes.
 
 The [PlotSprite.xml](./PlotSprite.xml) Sprite created by Eckart Modrow displays data in the form of simple lists of (x,y) data pairs and can also display functions of the x-axis.  IMPORTANT NOTE: the current model is to load *PlotSprite* into your project and create additional internal (**!**) *PlotSprite* methods for dealing with various plotting tasks.  Client Sprites can then send global broadcast requests (e.g. the classic "green flag" start message) or ask *PlotSprite* to invoke one of the new internal blocks created for the new purpose via a "run" or "tell" block.
+
+The changes from v0.1 are:
+- the plots are nicer looking;
+- there are small in-between tics as well as the large labelled tics;
+- one can alter the tic lengths and directions (if the property **scaleTiclength** is negative, the tics extend beyond the plot rather than pointing inwards);
+- the plots can handle large and small values via a scaling factor displayed along with the axis labels, e.g. "x-axis / 1.e10" means that the x-axis label values have been divided by a factor of 1.e10;
+- the plots can handle backwards axes (e.g. where the x-axis values get smaller as one goes from left to right);
+- the units of the values can be displayed (properties **xUnit** and **yUnit**);
+- the ranges can either be derived from the data or given explicitly;
+- the foreground colour of the plot can be changed (properties **frontColorRed**, **frontColorGreen**, **frontColorBlue**);
+- the box around the plot can be left out (property **plotBorder** = 0);
+- *PlotSprite* has a handy **unit test** block for testing its behavior under different circumstances. 
+The properties are set by default to reasonable values but can be set individually using the
+(private) block ![set property](./images/set_property.png).
+ 
 
 ---
 
