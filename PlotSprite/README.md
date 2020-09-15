@@ -57,7 +57,7 @@ and broadcast the message to *PlotSprite* (having already created the data)
 
 we get
 
-![line plot of data](./images/line_plot.png)
+![line plot of data](./images/plot1.png)
 
 Note that we could not have created this block outside of the *PlotSprite*, since we used private blocks (the ones with the "location" and "poster" icons at the start of the block).
 
@@ -75,7 +75,24 @@ or by directly asking the *PlotSprite* to run it's "plot" block
 
 The result is a slightly different plot:
 
-![marker plot of data](./images/marker_plot.png)
+![marker plot of data](./images/plot2.png)
+
+Sometimes it's better to let *PlotSprite* figure out what the meaningful limits to the plot are, by looking at the data first:
+
+![set ranges of data](./images/set_ranges_of.png)
+
+which leaves some room around the edges:
+
+![plot using set ranges of](./images/plot3.png)
+
+When the numbers get very large or very small, the labels on the tics and axes are adjusted by scaling the displayed numbers:
+
+![plot with large/small numbers](./images/plot4.png)
+
+Note that the original numbers were of order (x,y)=(0.000005,10000000).
+Here, we have also added units to both axes - no scientific plot without units! - using the properties **xUnit** and **yUnit** :
+
+![set property xUnit](./images/set_property_xUnit.png)
 
 This example is available here as [Example.xml](./Example.xml).
 
