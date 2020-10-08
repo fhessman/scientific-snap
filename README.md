@@ -27,6 +27,7 @@ The whole point of using Snap! is that it is powerful (in its own way), easy to 
 - the vertical and lateral structure of the connected blocks
 - the colours of the blocks and
 - the separation into different scripts and Sprites.
+
 However, a complicated and large Snap! script can still be quite a bit to digest.  Both because you will want to be able to understand what the programmes do after a week and because you will want to share them with your friends, colleagues, and/or teacher, you can do several things to make your programmes as understandable as possible - techniques common to all programming languages but with particular quirks in Snap!:
 - Keep your scripts small enough to be easily read in one or two glances. If your script is too long, it will be hard to read, hard to debug, and hence hard to maintain.  Long scripts can usually be separated into several smaller scripts working together.
 - Avoid repeating sequences of blocks - this is usually a sign that there's an underlying generic function best kept in a separate script.
