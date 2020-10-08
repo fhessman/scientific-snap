@@ -53,3 +53,4 @@ Put everything together and the simultion should produce a fairly accurate ellip
 What can you do with the simulation, other than enjoy seeing the planet doing it's celestial rounds?
 - Try to confirm Kepler's three "laws": (1) the closed orbits are ellipses; (2) the planet moves faster the closer it is to the central body (actually, the area traced out by the radius segment is equal in equal amounts of time); (3) the square of the period is proportional to the cube of the mean radius.  
 - Try using the [PlotSprite](../../PlotSprite) to show the orbital properties graphically.
+- Turning a differential equation into a simple difference equation is, well, simple enough but not particularly accurate.  There are other mathematical methods that can be used to improve the accuracy, notably the Runge-Kutta method (invented in Goettingen - yay! - and so pronounced "roonga-koota", not "runj-cut-a").
