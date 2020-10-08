@@ -1,4 +1,4 @@
-# <img alt="scientific-snap icon" src="./images/einstein_snap.png" width="50"/> Scientific Snap!
+# <img alt="scientific-snap icon" src="./images/einstein_snap.png" width="75"/> Scientific Snap!
 
 ## Motivation
 
