@@ -108,6 +108,8 @@ When your simulation runs, you'll note that the brightness changes are very smal
 
 Since the *Stage* brightness is given as the grayvalue of a giant pixel (between 0 and 255), it's hard to read off by what percent the brightness has changed.  This can be aleviated by noting the starting brightness (the very first value when nothing has happend) and then dividing the rest of the brightnesses by this value, resulting in a relative brightness that is easily interpreted.
 
+![lightcurve](./images/lightcurve.png)
+
 ---
 
 ### Plotting the lightcurve
