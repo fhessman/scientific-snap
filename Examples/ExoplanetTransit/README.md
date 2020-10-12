@@ -2,6 +2,8 @@
 
 In this example, we'll see how to create a simulated "transit lightcurve" of an exoplanet eclipsing its host star (a "lightcurve" is the brightness of an object versus time).  Observations of transiting exoplanets are the major means of discovering such objects as well as the best means for measuring their properties (size, sometimes mass and hence density). Although the [Eclipsing Binary Simulation](../EclipsingBinary) sounds different, many of the details of the simulation are very similar.
 
+![simulation](./images/exoplanet_simulation.png)
+
 Since we are only interested in the lightcurve immediately before, during, and immediately after the transit, the only properties of the host star and planet that are relevant are 
 - the size and appearance of the host star;
 - the size of the exoplanet;
@@ -12,7 +14,7 @@ We could define a formal exoplanet orbital period and inclination, but - again -
 
 While it is fine to model the disc of the host star as a uniform disc at first, **real** stars don't have uniform discs - they look like this
 
-<center><img src="./images/Sun.png" width="100"></center>
+<center><img src="./images/Sun.png" width="200"></center>
 
 (derived from https://en.wikipedia.org/wiki/Sun#/media/File:Sun_white.jpg; the background has been removed).  The edges of the stars are less bright, an effect called "limb-darkening".  This effect is due to the fact that stars are not solid objects but have atmospheres with layers that get thicker, genneraly hotter, and less transparent as one looks deeper and deeper in the star.  At the centre of the star, one can look fairly deeply before the star becomes opaque, but the line-of-sight near the limb encounters more material at higher levels and so becomes opaque where the atmosphere is generally cooler.  Cooler gas emits less light so the limb appears to be darker, giving the disc an artificial 3-D look.  While one could attempt to paint such a disc, the simpler and physically **MUCH** better solution is to take the image of a **REAL** star - i.e. the Sun -- which shows the correct limb darkening behavior **by definition**.  This makes your simulation more realistic than some astronomy graduate students' attempts!
 
@@ -82,6 +84,8 @@ In order to read the *Stage*'s brightness, we need to paste our content onto its
 - finally, after moving the exoplanet, have it paste its costume onto the Stage and show itself as well.
 
 ![tell sprites](./images/tell_sprites.png)
+
+Note that "tell" is a good way to give **Sprites** a series of standard commands; for non-standard commands you'll need to use "run" unless you want to have to mention the receiving Sprite twice - once for the receiver, and again to set the non-standard command.
 
 ---
 
