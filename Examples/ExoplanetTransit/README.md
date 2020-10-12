@@ -103,7 +103,7 @@ Once your simulation runs as expected, we want to calculate the apparent brightn
 
 When your simulation runs, you'll note that the brightness changes are very small; the ratio of the brightness before the transit and at mid-transit is roughly the ratio of the two objects areas, usually much less than a percent.  In order to plot the values, we need to store them in a "lightcurve" table:
 - create a "lightcurve" variable and initialize it with an empty list;
-- at the end of each iteration, add a list containing the "time" (x-position of the exoplanet) and brightness to the lightcurve list ![add list to lightcurve](./images/add_list_to_lightcurve.png);
+- at the end of each iteration, add a list containing the "time" (x-position of the exoplanet) and brightness to the lightcurve list ![add list to lightcurve](./images/add_to_lightcurve.png);
 - by asking the "lightcurve" list to display itself (checking the box to the left of the variable), you can inspect all the values in detail.
 
 Since the *Stage* brightness is given as the grayvalue of a giant pixel (between 0 and 255), it's hard to read off by what percent the brightness has changed.  This can be aleviated by noting the starting brightness (the very first value when nothing has happend) and then dividing the rest of the brightnesses by this value, resulting in a relative brightness that is easily interpreted.
