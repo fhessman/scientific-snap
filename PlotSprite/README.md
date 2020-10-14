@@ -7,8 +7,7 @@ The scientific-snap [PlotSprite](./PlotSprite.xml) displays data that is in the 
 The changes from v0.2 are:
 - the plots are even nicer looking;
 - the "add histogram.." block works correctly;
-- two handy block were added that make it much simpler to create plots quickly by offering the use of a single organizing block: ![plot of ...](./images/plot_of.png) and ![histogram of ...](./images/histogram_of.png); these blocks can be used to understand how plots are created using the lower-level *PlotSprite* functionality.
-
+- two handy blocks were added that make it much simpler to create plots quickly by offering the use of a single organizing block: ![plot of ...](./images/plot_of.png) and ![histogram of ...](./images/histogram_of.png).
 
 ---
 
@@ -24,19 +23,21 @@ will create a corresponding list of (x,y) values (here, a simple sine function):
 
 After importing PlotSprite.xml into our project, let us create an internal *PlotSprite* reaction to a global "plot data" broadcast message, 
 
-![plot of](./images/plot_of.png)
+![when I receive plot data](./images/when_I_receive_plot_data.png)
 
 Here, we have filled in all of the information necessary to make the plot: the source of the data (assumed to be a list of (x,y) value lists), the size, the labels, the appearances of the lines and markers, and their colours.  The result is
 
 ![plot1](./images/plot1.png)
 
-The alternative would be to create a block in the original *Sprite* that asks the *PlotSprite* to do the same: using a "tell ..."  block, that means specifying which *Sprite* is being asked (easy - just choose from a list), specifying the method of the *Sprite* (here, "plot of..."), and listing the arguments of the blocks used (one can ask to have several blocks executed, so the list of arguments can be longer).
+The alternative would be to create a block in the original *Sprite* that asks the *PlotSprite* to do the same: using a "tell ..."  block, specifying which *Sprite* is being asked (easy - just choose from a list), specifying the method of *PlotSprite* (here, "plot of..."), and listing the arguments of the blocks used (one can ask to have several blocks executed, so the list of arguments can be longer).
 
 ![create plot data](./images/create_plot_data.png)
 
 The disadvantage of the "tell ..." form is that the executing *Sprite* must be specified twice: if you use the "run ..." form, you only need specify this once.
 
 ---
+
+### Plotting Histograms
 
 *PlotSprite* will also produce histograms of values.  Since our "xydata" is a table, we need to extract just one column using the ![columns of table](./images/columns_of_table.png) block: if the second column argument is blank, only a single column will be returned.  The resulting *PlotSprite* script responding to a "plot histogram" broadcast
 
@@ -52,17 +53,19 @@ We can do the same from a different *Sprite*, again using inter-*Sprite* communi
 
 ![plot histogram indirect](./images/plot_histogram_indirect.png)
 
-This form is obviously much more cumbersome because of the separation of the block and the arguments. For this reason, you will probably want to let your own version of *PlotSprite* do the plotting.  The disadvantage of this is that you will have to share the details of your use between different *Sprites*.
+This form is obviously much more cumbersome because of the separation of the block and the arguments. For this reason, you will probably want to let your own version of *PlotSprite* do the plotting.  The disadvantage is that you will have to share the details of your use between different *Sprites*; you might want to remind yourself that you are thus changing the original *PlotSprite* by added foreign information - perhaps you should rename it to *SinePlotSprite*!
 
 
 
 ---
 
+### Plotting by Hand
+
 To see how plotting works, let's do all of the work by hand.  This way we can configure the plot to have many different properties and appearances, at the price of doing a lot more work.
 
 First, we need a response header
 
-![respond to plot data message](./images/when_I_receive_plot_data.png)
+![when I receive](./images/when_I_receive.png)
 
 then the creation of a new plot costume (the width, height, and colour of the frame used for plotting)
 
