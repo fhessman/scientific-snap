@@ -11,7 +11,7 @@ The changes from v0.2 are:
 
 ---
 
-### Example
+## Example
 
 As an example, let's create a simple set of (x,y) data that we would like to have plotted. After defining a global "xydata" variable, pressing the following blocks
 
@@ -37,7 +37,7 @@ The disadvantage of the "tell ..." form is that the executing *Sprite* must be s
 
 ---
 
-### Plotting Histograms
+## Plotting Histograms
 
 *PlotSprite* will also produce histograms of values.  Since our "xydata" is a table, we need to extract just one column using the ![columns of table](./images/columns_of_table.png) block: if the second column argument is blank, only a single column will be returned.  The resulting *PlotSprite* script responding to a "plot histogram" broadcast
 
@@ -56,10 +56,9 @@ We can do the same from a different *Sprite*, again using inter-*Sprite* communi
 This form is obviously much more cumbersome because of the separation of the block and the arguments. For this reason, you will probably want to let your own version of *PlotSprite* do the plotting.  The disadvantage is that you will have to share the details of your use between different *Sprites*; you might want to remind yourself that you are thus changing the original *PlotSprite* by added foreign information - perhaps you should rename it to *SinePlotSprite*!
 
 
-
 ---
 
-### Plotting by Hand
+## Plotting by Hand
 
 To see how plotting works, let's do all of the work by hand.  This way we can configure the plot to have many different properties and appearances, at the price of doing a lot more work.
 
