@@ -41,7 +41,7 @@ then tell the Moon **Sprite** to move to that position,
 
 and, finally, increment the angle of the Moon's orbit at the end of each iteration.  If you want, you can ask the Moon to leave it's pen down while moving so that you can see the outline of the orbit.
 
-Once this simplest simulation works, add the rotation of the Moon by telling the Moon not only to change it's position, but also to rotate in the proper manner.  In **Snap!**, the #[point](./images/point_in_direction.png) block causes the **Sprite** to rotate itself so that it points in a particular direction, but an even better block is the one that points one Sprite in the direction of another:
+Once this simplest simulation works, add the rotation of the Moon by telling the Moon not only to change it's position, but also to rotate in the proper manner.  In **Snap!**, the ![point](./images/point_in_direction.png) block causes the **Sprite** to rotate itself so that it points in a particular direction, but an even better block is the one that points one Sprite in the direction of another:
 
 ![point towards Earth](./images/point_towards_Earth.png)
 
@@ -100,4 +100,6 @@ For each iteration, we then only need to position the Connector at the position 
 Here, we have using the "(property) of (Sprite)" block to get the coordinates of the Earth, since the original "x" and "y" positions were changed to be those of the the Moon (we could have used "x" and "y" as the Connector position and then pointed the line at the Earth!).  Note also, that we have pushed the line costume to the back of the Stage so that the line is underneath the costumes of the Earth and Moon (we could have positioned the Connector first and then positioned the Earth and Moon, but that would mean messing around with our original code).
 
 Voila!  The simulation now helps the viewer to see what part of the Moon is illuminated as viewed from the Earth.  It would be better to add two lines that go from the Earth's surface to the edges of the Moon - that's the total extent of the Moon as viewed from the Earth - but that would be a bit more difficult.
+
+![simulation with connector](./images/simulation_with_connector.png)
 
