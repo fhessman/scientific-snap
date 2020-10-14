@@ -1,23 +1,14 @@
 # <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> PlotSprite (v0.2)
 
-One of the foundations of *Snap!*, like *Scratch*, is the *Logo*-like use of "turtle graphics" - simple pen-based drawing.  However, there is no generic means of displaying data graphically, something which is desperately needed when using *Snap!* for scientific or mathematical purposes.
+One of the foundations of *Snap!*, like *Scratch*, is the *Logo*-like use of "turtle graphics" - simple pen-based drawing.  However, there is no generic means of displaying data graphically as a formal plot, something which is often needed when using *Snap!* for scientific or mathematical purposes.
 
-The [PlotSprite.xml](./PlotSprite.xml) Sprite created by Eckart Modrow displays data in the form of simple lists of (x,y) data pairs and can also display functions of the x-axis.  IMPORTANT NOTE: the current model is to load *PlotSprite* into your project and create additional internal (**!**) *PlotSprite* methods for dealing with various plotting tasks.  Client Sprites can then send global broadcast requests (e.g. the classic "green flag" start message) or ask *PlotSprite* to invoke one of the new internal blocks created for the new purpose via a "run" or "tell" block.
+The scientific-snap [PlotSprite](./PlotSprite.xml) displays data that is in the form of a table, often simple lists of (x,y) data pairs, and can also display histograms and functions of the x-axis.
 
-The changes from v0.1 are:
-- the plots are nicer looking;
-- there are small in-between tics as well as the large labelled tics;
-- one can alter the tic lengths and directions (if the property **scaleTiclength** is negative, the tics extend beyond the plot rather than pointing inwards);
-- the plots can handle large and small values via a scaling factor displayed along with the axis labels, e.g. "x-axis / 1.e10" means that the x-axis label values have been divided by a factor of 1.e10;
-- the plots can handle backwards axes (e.g. where the x-axis values get smaller as one goes from left to right);
-- the units of the values can be displayed (properties **xUnit** and **yUnit**);
-- the ranges can either be derived from the data or given explicitly;
-- the foreground colour of the plot can be changed (properties **frontColorRed**, **frontColorGreen**, **frontColorBlue**);
-- the box around the plot can be left out (property **plotBorder** = 0);
-- *PlotSprite* has a handy **unit test** block for testing its behavior under different circumstances. 
-The properties are set by default to reasonable values but can be set individually using the
-(private) block ![set property](./images/set_property.png).
- 
+The changes from v0.2 are:
+- the plots are even nicer looking;
+- the "add histogram.." block works correctly;
+- two handy block were added that make it much simpler to create plots quickly by offering the use of a single organizing block: ![plot of ...](./images/plot_of.png) and ![histogram of ...](./images/histogram_of.png); these blocks can be used to understand how plots are created using the lower-level *PlotSprite* functionality.
+
 
 ---
 
@@ -31,11 +22,49 @@ will create a corresponding list of (x,y) values (here, a simple sine function):
 
 ![created sine function data](./images/created_data.png)
 
-After importing PlotSprite.xml into our project, let us create an internal *PlotSprite* reaction to a global "plot data" broadcast message, consisting of the response header
+After importing PlotSprite.xml into our project, let us create an internal *PlotSprite* reaction to a global "plot data" broadcast message, 
+
+![plot of](./images/plot_of.png)
+
+Here, we have filled in all of the information necessary to make the plot: the source of the data (assumed to be a list of (x,y) value lists), the size, the labels, the appearances of the lines and markers, and their colours.  The result is
+
+![plot1](./images/plot1.png)
+
+The alternative would be to create a block in the original *Sprite* that asks the *PlotSprite* to do the same: using a "tell ..."  block, that means specifying which *Sprite* is being asked (easy - just choose from a list), specifying the method of the *Sprite* (here, "plot of..."), and listing the arguments of the blocks used (one can ask to have several blocks executed, so the list of arguments can be longer).
+
+![create plot data](./images/create_plot_data.png)
+
+The disadvantage of the "tell ..." form is that the executing *Sprite* must be specified twice: if you use the "run ..." form, you only need specify this once.
+
+---
+
+*PlotSprite* will also produce histograms of values.  Since our "xydata" is a table, we need to extract just one column using the ![columns of table](./images/columns_of_table.png) block: if the second column argument is blank, only a single column will be returned.  The resulting *PlotSprite* script responding to a "plot histogram" broadcast
+
+![plot histogram direct](./images/plot_histogram_direct.png)
+
+results in the following histogram:
+
+![histogram](./images/histogram.png)
+
+(the histogram looks so terrible because we have so few samples!).
+
+We can do the same from a different *Sprite*, again using inter-*Sprite* communication.  To make things easier to read, we first extract a copy of a single column (the sine-function values alone) and then ask the *PlotSprite* to plot the extracted data vector with the same arguments:
+
+![plot histogram indirect](./images/plot_histogram_indirect.png)
+
+This form is obviously much more cumbersome because of the separation of the block and the arguments. For this reason, you will probably want to let your own version of *PlotSprite* do the plotting.  The disadvantage of this is that you will have to share the details of your use between different *Sprites*.
+
+
+
+---
+
+To see how plotting works, let's do all of the work by hand.  This way we can configure the plot to have many different properties and appearances, at the price of doing a lot more work.
+
+First, we need a response header
 
 ![respond to plot data message](./images/when_I_receive_plot_data.png)
 
-the creation of a new plot costume (the width, height, and colour of the frame used for plotting)
+then the creation of a new plot costume (the width, height, and colour of the frame used for plotting)
 
 ![create a plot costume](./images/new_costume.png)
 
@@ -55,9 +84,7 @@ and broadcast the message to *PlotSprite* (having already created the data)
 
 ![broadcast a plot data message](./images/broadcast_plot_data.png)
 
-we get
-
-![line plot of data](./images/plot1.png)
+we get get the same plot as before.
 
 Note that we could not have created this block outside of the *PlotSprite*, since we used private blocks (the ones with the "location" and "poster" icons at the start of the block).
 
