@@ -1,4 +1,4 @@
-# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> PlotSprite (v0.2)
+# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> PlotSprite (v0.3)
 
 One of the foundations of *Snap!*, like *Scratch*, is the *Logo*-like use of "turtle graphics" - simple pen-based drawing.  However, there is no generic means of displaying data graphically as a formal plot, something which is often needed when using *Snap!* for scientific or mathematical purposes.
 
