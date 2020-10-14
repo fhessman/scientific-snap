@@ -13,8 +13,9 @@ Here is an indication of the relative programming difficulty:
 | ExoplanetTransit  | Simulating the appearance of an exoplanet transit and reading the brightness of the Stage to create a lightcurve  | beginner to intermediate  |
 | RemoteSensing  | Accessing, processing, and plotting mobile-phone data recorded by PhyPhox  | beginner to intermediate  |
 | EclipsingBinary  | Simulating the appearance of an eclipse binary star system and measuring the lightcurve  | intermediate  |
-| StellarStructure  | Solving the hydrostatic equilibrium equation for a star or planet  | intermediate  |
-| TrafficJam  | Simulating a traffic jam caused by heavy traffic  | intermediate  |
+| SaturnVRocket | Simulating the launch of a rocket | intermediate (once you understand the physics) |
+| TrafficJam  | Simulating a traffic jam caused by heavy traffic  | intermediate to advanced |
+| StellarStructure  | Solving the hydrostatic equilibrium equation for a star or planet  | advanced |
 | ParameterFitting  | Fitting a model to data using a Monte Carlo Markov Process  | advanced  |
 
 If the projects are not yet filled, that's only because we haven't gotten around to writing it up.
