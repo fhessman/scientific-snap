@@ -64,7 +64,7 @@ The basic *SimulationSprite* doesn't have much to do other than igniting the roc
 
 All of the work is done, of course, by the rocket.  When it is ignited, it simply runs until the fuel is consumed.
 
-![repeat until fuel is out](./images/repeat_util.png)
+![repeat until off](./images/repeat_until_off.png)
 
 Within this loop, one calculates the current acceleration
 
