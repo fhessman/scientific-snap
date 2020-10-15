@@ -4,6 +4,10 @@ In this example, we'll see what it takes to launch a Saturn V rocket into space 
 
 ![simulation](./images/simulation.png)
 
+---
+
+## How does a rocket work?
+
 To understand how a rocket works, one only needs to unterstand a few things.
 - Newton's law says that the force F on a body is equal to the mass m times the acceleration a of the body (F=ma).
 - Most rocket engines have constant "thrusts", i.e. constant forces that can be imparted to propell the rocket forward (actually some rockets often have variable thrusts depending upon the variable rate of fuel consumption, but we'll ignore this fact).
@@ -23,6 +27,10 @@ Thus the final height reached by the rocket depends upon the combination of seve
 - the thrust of the rocket engines;
 - the fuel consumption rate; and of course
 - the acceleration of gravity of the Earth trying to pull the rocket down (-9.8 m/s/s).
+
+---
+
+## The Simulation
 
 To simulate a rocket launch, we need the above parameters at the start and then for every time-step, we need to calculate 
 - how much fuel is left and hence the current mass of the rocket;
@@ -54,11 +62,11 @@ The basic *SimulationSprite* doesn't have much to do other than igniting the roc
 
 ![broadcast ignition](./images/broadcast_ignition.png)
 
-All of the work is done, of course, by the rocket.  When it is ignited,
+All of the work is done, of course, by the rocket.  When it is ignited, it simply runs until the fuel is consumed.
 
-![repeat until fuel = 0](./images/broadcast_ignition.png)
+![repeat until fuel = 0](./images/repeat_util.png)
 
-it simply runs until the fuel is consumed.  Within this loop, one calculates the current acceleration
+Within this loop, one calculates the current acceleration
 
 ![set acceleration](./images/set_acceleration.png)
 
@@ -70,7 +78,7 @@ assuming that the rocket gets off the ground at all!!! - you need to check for t
 
 ![change fuel, velocity, height using dt](./images/change_dt.png)
 
-If the simulation is too fast, you can slow it down to a realistic speed by sticking in a wait block
+If the simulation is too fast, you can slow each iteration down to a realistic speed by sticking in a wait block
 
 ![wait 1 secs](./images/wait_1_secs.png)
 
@@ -97,9 +105,9 @@ that turn off when the rocket runs out of fuel
 
 Since this is a **scientific** simulation, we should add a plot of the rockets performance.
 - Add a [PlotSprite](../../PlotSprite/PlotSprite.xml) to your project.
-- Add a data table for the times (iteration number if each iteration takes 1 second) and heights.
+- Add a data table for the times (total number of iterations if each iteration takes 1 second, otherwise you need to add up all of the time-steps used) and heights.
 - When the rocket starts, have it initialize the table with an empty list.
 - For each iteration, add a list containing the time and height to the table.
-- Let the *PlotSprite* plot every now and then, at least until the fuel runs out:
+- Let the *PlotSprite* plot every now and then, and stop when the fuel runs out or the rocket crashes.
 
 ![plot](./images/plot.png)
