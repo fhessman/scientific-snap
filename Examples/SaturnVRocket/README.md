@@ -12,20 +12,20 @@ To understand how a rocket works, one only needs to unterstand a few things.
 - Newton's law says that the force F on a body is equal to the mass m times the acceleration a of the body (F=ma).
 - Most rocket engines have constant "thrusts", i.e. constant forces that can be imparted to propell the rocket forward (actually some rockets often have variable thrusts depending upon the variable rate of fuel consumption, but we'll ignore this fact).
 - The thrust can be imparted as long as the rocket has fuel.
-- The acceleration due to the thrust force depends upon the total mass of the rocket, which is constantly changing due to the loss of mass via the consumption of fuel.
+- The acceleration due to the thrust force a=F/m depends upon the total mass m of the rocket, which is constantly changing due to the loss of mass via the consumption of fuel.
 - The rocket thus starts with lots of fuel and hence lots of mass, which makes the rocket slowly accelerate at the beginning.
 - As the fuel is used up, the mass of the rocket decreases, which makes the rocket accelerate more rapidly due to the constant force (F=const, a=F/m, m is getting smaller so a is getting larger).
-- The change in the velocity over a short time is the acceleration times that time interval.
-- The similar change in the height is the velocity times that time interval.
+- The change in the velocity over a short time is the acceleration times that time interval (the acceleration is the change in velocity over the change in time).
+- The similar change in the height is the velocity times that time interval (the velocity is the change in height over the change in time).
 - The similar change in the fuel mass is the consumption rate C times that time interval.
 
 ![dv = a dt, dh = v dt, dm = c dt](./images/equations.png)
 
 Thus the final height reached by the rocket depends upon the combination of several factors:
-- the empty mass of the rocket;
-- the mass of the fuel at the beginning;
-- the thrust of the rocket engines;
-- the fuel consumption rate; and of course
+- the empty mass of the rocket (the lighter the rocket, the easier it is to get off the ground);
+- the mass of the fuel at the beginning (Ibid.);
+- the thrust of the rocket engines (if not big enough, the rocket won't budge);
+- the fuel consumption rate (if your fuel runs out too quickly, you wont' get very far); and of course
 - the acceleration of gravity of the Earth trying to pull the rocket down (-9.8 m/s/s).
 
 ---
@@ -64,7 +64,7 @@ The basic *SimulationSprite* doesn't have much to do other than igniting the roc
 
 All of the work is done, of course, by the rocket.  When it is ignited, it simply runs until the fuel is consumed.
 
-![repeat until fuel = 0](./images/repeat_util.png)
+![repeat until fuel is out](./images/repeat_util.png)
 
 Within this loop, one calculates the current acceleration
 
@@ -86,6 +86,7 @@ At the end of the simulation, you know how far off the ground the rocket got. Of
 - Track not just the vertical motion of the rocket but it's horizontal motion as well.
 - Add the friction due to the air by adding a frictional acceleration dependent on the rocket's speed.
 - Make a *SpaceXSimulation* by being able to modify the thrust so that the rocket touches down again (not so hard as a simulation, since the rocket could weigh very little at the end, making it easier to come down and land softly).
+- Simulate an ion-propulsion rocket with a tiny thrust but an even tinier fuel consumption rate (the exhaust is accelerated to near light speeds by an electric field so one doesn't need much fuel for a given thrust); how long does it take a small rocket to get to the next star, Alpha Centauri?
 
 ---
 
