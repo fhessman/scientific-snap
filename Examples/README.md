@@ -12,8 +12,9 @@ Here is an indication of the relative programming difficulty:
 | Pandemic  | Moving and sensing the closness of *Sprites* to simulate a pandemic  | beginner to intermediate  |
 | ExoplanetTransit  | Simulating the appearance of an exoplanet transit and reading the brightness of the Stage to create a lightcurve  | beginner to intermediate  |
 | RemoteSensing  | Accessing, processing, and plotting mobile-phone data recorded by PhyPhox  | beginner to intermediate  |
+| SaturnVRocket | Simulating the launch of a rocket | beginner to intermediate (once you understand the physics) |
 | EclipsingBinary  | Simulating the appearance of an eclipse binary star system and measuring the lightcurve  | intermediate  |
-| SaturnVRocket | Simulating the launch of a rocket | intermediate (once you understand the physics) |
+| ExoplanetDetection  | Simulating the spectroscopic signal of an exoplanet host star | intermediate  |
 | TrafficJam  | Simulating a traffic jam caused by heavy traffic  | intermediate to advanced |
 | StellarStructure  | Solving the hydrostatic equilibrium equation for a star or planet  | advanced |
 | ParameterFitting  | Fitting a model to data using a Monte Carlo Markov Process  | advanced  |
