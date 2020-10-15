@@ -44,21 +44,34 @@ Obviously, if the rocket has too small a thrust, has too large a fuel consumptio
 
 First we need to set the basic parameters of a Saturn V rocket first stage.
 Some of them can be found in the internet, in particular the thrust and the fuel mass.
+
 ![thrues](./images/thrust.png)
 ![fuel mass](./images/fuel.png)
+
 while others aren't so easily found and so have to be estimated.  The consumption can be estimated from the fuel mass and the length of time the 1st stage was working.  The empty mass can be found by finding the consumption rate that works for the historic performance of the Saturn V 1st stage - one can guess that most of the total initial mass in contained in the fuel.
 
-The basic *SimulationSprite* doesn't have much to do other than igniting the rocket
+The basic *SimulationSprite* doesn't have much to do other than igniting the rocket, e.g. via
+
 ![broadcast ignition](./images/broadcast_ignition.png)
-All of the work is done, of course, by the rocket.  When it is ignited, it simply runs until the fuel is consumed
+
+All of the work is done, of course, by the rocket.  When it is ignited,
+
 ![repeat until fuel = 0](./images/broadcast_ignition.png)
-Within this loop, one calculates the current acceleration
+
+it simply runs until the fuel is consumed.  Within this loop, one calculates the current acceleration
+
 ![set acceleration](./images/set_acceleration.png)
+
 modifies the amount of fuel, the velocity, and the height
+
 ![change fuel, velocity, height](./images/change.png)
+
 assuming that the rocket gets off the ground at all!!! - you need to check for this unfortunate situation which hasn't been checked for here!  In these blocks, we have assumed that each iteration lasts 1 second; the actual time-step could be set to something else if we have a time-step variable set and multiple these things by it.
+
 ![change fuel, velocity, height using dt](./images/change_dt.png)
+
 If the simulation is too fast, you can slow it down to a realistic speed by sticking in a wait block
+
 ![wait 1 secs](./images/wait_1_secs.png)
 
 At the end of the simulation, you know how far off the ground the rocket got. Of course, you can apply this simulation to *any* rocket, including your own if you are a hobby rocketeer!  In this case, you may want to make additional changes...
@@ -71,16 +84,22 @@ At the end of the simulation, you know how far off the ground the rocket got. Of
 ## Adding some nice *Snap!* touches
 
 Of course, no rocket launch is complete without a real spoken countdown
+
 ![countdown](./images/countdown.png)
+
 and you can give your *RocketSprite* an historically correct costume.  If you want to see when the rocket is operating, why not give it's back-end  a nice *FlameSprite* with lots of different fiery costumes
+
 ![flames](./images/thrust_costumes.png)
+
 that turn off when the rocket runs out of fuel
+
 ![when I receive off](./images/when_I_receive_off.png)
 
 Since this is a **scientific** simulation, we should add a plot of the rockets performance.
-- Add a ![PlotSprite](../../PlotSprite.xml) to your project.
+- Add a [PlotSprite](../../PlotSprite/PlotSprite.xml) to your project.
 - Add a data table for the times (iteration number if each iteration takes 1 second) and heights.
 - When the rocket starts, have it initialize the table with an empty list.
 - For each iteration, add a list containing the time and height to the table.
 - Let the *PlotSprite* plot every now and then, at least until the fuel runs out:
+
 ![plot](./images/plot.png)
