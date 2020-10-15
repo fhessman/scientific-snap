@@ -6,6 +6,7 @@ Here is an indication of the relative programming difficulty:
 
 | Example  | Description  | Difficulty  |
 | :-----:  | :---------:  | :--------:  |
+| Archery | Simulating an archer | beginner  |
 | StellarParallax  | Simulating the shift of foreground stars due to the Earth's motion  | beginner  |
 | KeplerOrbit  | Simulating the effects of gravity felt by a planet  | beginner (once you understand the maths)  |
 | LunarPhases  | Moving and rotating *Sprites* to simulation the formation of Lunar phases  | beginner to intermediate  |
@@ -15,6 +16,7 @@ Here is an indication of the relative programming difficulty:
 | SaturnVRocket | Simulating the launch of a rocket | beginner to intermediate (once you understand the physics) |
 | EclipsingBinary  | Simulating the appearance of an eclipse binary star system and measuring the lightcurve  | intermediate  |
 | ExoplanetDetection  | Simulating the spectroscopic signal of an exoplanet host star | intermediate  |
+| AutonomousDriving| Simulating an autonomously driving car  | beginner to advanced |
 | TrafficJam  | Simulating a traffic jam caused by heavy traffic  | intermediate to advanced |
 | StellarStructure  | Solving the hydrostatic equilibrium equation for a star or planet  | advanced |
 | ParameterFitting  | Fitting a model to data using a Monte Carlo Markov Process  | advanced  |
