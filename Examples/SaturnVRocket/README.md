@@ -1,4 +1,4 @@
-# <img alt="scientific-snap-icon" src="../../images/einstein_snap.png" width="50"/> Example: Saturn V Rocket
+# <img alt="scientific-snap-icon" src="../../images/einstein_snap.png" width="70"/> Example: Saturn V Rocket
 
 In this example, we'll see what it takes to launch a Saturn V rocket into space - at least the very first stage.
 
@@ -119,4 +119,5 @@ There are many ways this simulation could be extended or modified.
 - Add the friction due to the air by adding a frictional acceleration dependent on the rocket's speed.
 - Make a *SpaceXSimulation* by being able to modify the thrust so that the rocket touches down again (not so hard as a simulation, since the rocket could weigh very little at the end, making it easier to come down and land softly).
 - Simulate an ion-propulsion rocket launched from outer space with a tiny thrust but an even tinier fuel consumption rate (the exhaust is accelerated to near light speeds by an electric field so one doesn't need much fuel for a given thrust). Both ESA (e.g. Artemis, SMART-1) and NASA (e.g. Deep Space 1) have prototypes you can simulate.  How long would it take a small ion-propulsion rocket to get to the next star, Alpha Centauri?
+- Simulate a multi-stage rocket like the complete Saturn V.  Use a list of stage masses, fuel masses, and thrusts so that you can remove a stage when it is done.
 
