@@ -118,5 +118,5 @@ There are many ways this simulation could be extended or modified.
 - Track not just the vertical motion of the rocket but it's horizontal motion as well.
 - Add the friction due to the air by adding a frictional acceleration dependent on the rocket's speed.
 - Make a *SpaceXSimulation* by being able to modify the thrust so that the rocket touches down again (not so hard as a simulation, since the rocket could weigh very little at the end, making it easier to come down and land softly).
-- Simulate an ion-propulsion rocket with a tiny thrust but an even tinier fuel consumption rate (the exhaust is accelerated to near light speeds by an electric field so one doesn't need much fuel for a given thrust); how long does it take a small rocket to get to the next star, Alpha Centauri?
+- Simulate an ion-propulsion rocket launched from outer space with a tiny thrust but an even tinier fuel consumption rate (the exhaust is accelerated to near light speeds by an electric field so one doesn't need much fuel for a given thrust). Both ESA (e.g. Artemis, SMART-1) and NASA (e.g. Deep Space 1) have prototypes you can simulate.  How long would it take a small ion-propulsion rocket to get to the next star, Alpha Centauri?
 
