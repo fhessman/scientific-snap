@@ -133,7 +133,7 @@ Here is a table describing the various configuration parameters with which you c
 
 Name | Description | Default
 ---- | ----------- | -------
-typeOfData | A keyword used to identify the type of data being plotted; currently not used. | "table"
+typeOfData | A keyword used to identify the type of data being plotted; currently not used. | "empty"
 backColor\* | RGB values used to determine the background colour of the plot; | 0,0,0
 frontColor\* | RGB values used to determine the colour of the borders and label texts. | 0,0,0
 plotBorder | If true, a border is plotted around the edge of the costume. | false
