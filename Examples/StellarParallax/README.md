@@ -8,7 +8,7 @@ In this example, we'll see how to simulate the apparent motion of nearby stars d
 
 ## Introduction
 
-Probably no other astronomical discovery was more profound than when Friedrich Bessel measured the distance to one of the most nearby stars, called 61 Cygni.  While it had been assumed before that the stars might be like the Sun and hence very far away (the Sun is very very bright and the stars are very very faint), no one really knew until Bessel proved it.  The technique that Bessel used was to measure the effects of *Stellar Parallax*.
+Probably no other astronomical discovery was more profound than when Friedrich Bessel measured the distance to one of the most nearby stars, called 61 Cygni, in 1838.  While it had been assumed before that the stars might be like the Sun and hence very far away (the Sun is very very bright and the stars are very very faint), no one really knew until Bessel proved it.  The technique that Bessel used was to measure the effects of *Stellar Parallax*.
 
 Stellar Parallax is the apparent motion of distant stars on the sky due to the motion of the Earth around the Sun. This phenomenon is known to us in our normal lives as *stereoscopic vision*: the view of a nearby object is different when viewed from different perspectives (e.g. from a left and from a right eye) compared with objects that are much farther away.  The farther away the nearby object is, the less effect one sees.  The farther apart the views are, the more effect one sees.  In astronomy, the nearby object is a star, the two views are images taken of the star about 1/2 year apart (when the Earth is at very different positions in its orbit around the Sun), and the background against which one sees the apparent motion is the pattern of very distant stars and galaxies.  Whereas Bessel could only measure the distances to the very most nearby stars (an amazing feat considering he used a small if very specialized telescope and his own eyes), modern astrometric satellites like GAIA can measure the distances to stars at the center of our Galaxy a thousand times farther away using the same method.
 
@@ -31,6 +31,8 @@ This is the really easy part.  When the "green flag" broadcast is triggered, we 
 - Get the ![distance to Sun](./images/distance_to_Sun.png), so that you can calculate the Earth's relative x- and y-positions within the orbit using the orbital angle.
 - Get the x- and y-position of the Sun on the Stage using ![ask Sun for x position](./images/ask_Sun_for_x.png).
 - Calculate the final position of the Earth (Sun's position plus the relative positions) and ask it to move to that new position.
+
+![Earth go to](./images/Earth_go_to.png)
 
 The nice thing about this method - asking the Sun for it's instantaneous position and distance, is that one can dynamically change the position of the Sun or Earth and they will respond by using a different Sun position or Sun-Earth distance.  This way, you can easily change your simulation later to model relatively close stars (using a big Earth orbit) or relatively far away stars (using a very tight Earth orbit).
 
