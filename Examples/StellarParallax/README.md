@@ -34,7 +34,7 @@ This is the really easy part.  When the "green flag" broadcast is triggered, we 
 
 ![Earth go to](./images/Earth_go_to.png)
 
-The nice thing about this method - asking the Sun for it's instantaneous position and distance, is that one can dynamically change the position of the Sun or Earth and they will respond by using a different Sun position or Sun-Earth distance.  This way, you can easily change your simulation later to model relatively close stars (using a big Earth orbit) or relatively far away stars (using a very tight Earth orbit).
+The nice thing about this programming technique - asking the Sun for it's instantaneous position and distance - is that one can dynamically change the position of the Sun or Earth and they will respond by using a different Sun position or Sun-Earth distance.  This way, you can easily change your simulation later to model relatively close stars (using a big Earth orbit) or relatively far away stars (using a very tight Earth orbit) - simply move the Earth closer or farther away from the Sun and the Earth Sprite will automatically adjust it's orbit.
 
 ---
 
@@ -63,7 +63,7 @@ This is the only somewhat tricky programming task: given the Sun, the Earth, and
 
 The first obvious step is to create an **ApparentStar** Sprite we can place at the right position.... somehow.
 
-There are (at least) two obvious ways, one using classic Snap! programming techniques and another some maths:
+There are (at least) two obvious ways to solve this problem, one using classic Snap! programming techniques and another some maths:
 - Using Snap!: the **ArrowSprite** is always pointing towards the Star and by drawing the arrow the Sprite always ends up at the position of the Star, pointing in the right direction; simply have it continue along this corrrect path until it reaches the starry background and  have it tell the **ApparentStar** to go to this position.
 - Mathematically, the Sun and Earth - each of which has a well-defined x- and y-position - define a line.  We want to extend this line to a different x-position (that of the starry background).  The simple interpolating function that gives the y-value of any point along such a line is
 
