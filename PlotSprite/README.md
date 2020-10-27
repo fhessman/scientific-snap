@@ -1,4 +1,4 @@
-# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> PlotSprite (v0.3)
+# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="70"/> PlotSprite (v0.3)
 
 One of the foundations of *Snap!*, like *Scratch*, is the *Logo*-like use of "turtle graphics" - simple pen-based drawing.  However, there is no generic means of displaying data graphically as a formal plot, something which is often needed when using *Snap!* for scientific or mathematical purposes.
 
@@ -125,3 +125,57 @@ Here, we have also added units to both axes - no scientific plot without units! 
 
 This example is available here as [Example.xml](./Example.xml).
 
+---
+
+## Configuration parameters
+
+Here is a table describing the various configuration parameters with which you can modify the appearance of your plots.
+
+Name | Description | Default
+---- | ----------- | -------
+typeOfData | A keyword used to identify the type of data being plotted; currently not used. | "table"
+backColor\* | RGB values used to determine the background colour of the plot; | 0,0,0
+frontColor\* | RGB values used to determine the colour of the borders and label texts. | 0,0,0
+plotBorder | If true, a border is plotted around the edge of the costume. | false
+leftOffset | Space between the left edge of the costume and that of the plot. | (dynamic)
+rightOffset | Space between the right edge of the costume and that of the plot. | (dynamic)
+upperOffset | Space between the upper edge of the costume and that of the plot. | (dynamic)
+lowerOffset | Space between the lower edge of the costume and that of the plot. | (dynamic)
+title | Title text displayed above the plot. | (none)
+titleHeight | Height of the title text. | 18
+xLabel | Label text normally displayed below the plot. | (none)
+xLabelHeight | Height of the xlabel text. | 16
+yLabel | Label text normally displayed left of the plot. | (none)
+yLabelHeight | Height of the ylabel text. | 16
+xLeft | Left limiting scale value in units of the plot; can be > xRight. | -10
+xRight | Right limiting scale value in units of the plot; can be < xLeft. | 10
+yLower | Lower limiting scale value in units of the plot; can be > yUpper. | -10
+yUpper | Upper limiting scale value in units of the plot; can be < yLower. | 10
+xUnit | Units of the x-axis scale values (e.g. "km/s"); if given, displayed with the xLabel. | (none)
+yUnit | Units of the y-axis scale values (e.g. "furlongs/fortnight"); if given, displayed with the yLabel. | (none)
+lineStyle | Format of lines drawn between data-points; one of "none", "continuous", "dashed", "dash-dot", "dot-dot", or "rainbow". | "continuous"
+lineWidth | Width of lines drawn between data-points. | 1
+lineColor\* | RGB values for the colour used for lines drawn between data-points. | 0,0,0
+datapointStyle | Format of markers representing data-points; one of "none", "o_circle", "._point", "+_plus", "x_ex", "square", or "triangle" | "square"
+datapointWidth | Size of markers representing data-points. | 5
+datapointConnected | (not used) | (not used)
+datapointColor\* | RGB values for the colour of markers representing data-points. | 0,0,0
+scalesXPrecision | Number of decimal places in the x-axis tic numbers. | (dynamic)
+scalesYPrecision | Number of decimal places in the y-axis tic numbers. | (dynamic)
+scalesXTextheight | Size of x-axis tic numbers. | 12
+scalesYTextheight | Size of y-axis tic numbers. | 12
+scalesXIntervals | Number of mini-tics between x-axis tic numbers. | (dynamic)
+scalesYIntervals | Number of mini-tics between y-axis tic numbers. | (dynamic)
+scalesXStart | Scaled starting number of x-axis tic numbers. | (dynamic)
+scalesYStart | Scaled starting number of y-axis tic numbers. | (dynamic)
+scalesXStep | Scaled difference between x-axis tic numbers. | (dynamic)
+scalesYStep | Scaled difference between y-axis tic numbers. | (dynamic)
+scalesXScaling | Factor between x-axis tic positions and scalesXStart,scalesXStep. | (dynamic)
+scalesYScaling | Factor between y-axis tic positions and scalesYStart,scalesYStep. | (dynamic)
+scalesTiclength | Length of axes tics | 6
+scalesXMinitics | If true, minor tics are shown between the major x-axis tics. | true
+scalesYMinitics | If true, minor tics are shown between the major y-axis tics. | true
+scalesXGrid | If true, the major x-axis tics are connected. | false
+scalesYGrid | If true, the major y-axis tics are connected. | false
+scalesXCentered | If true, the y-axis is drawn along x=0. | false
+scalesYCentered | If true, the x-axis is drawn along y=0. | false
