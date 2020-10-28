@@ -14,7 +14,7 @@ Let ![deltaA,deltar](./images/delta_A_delta_r.png) be the area perpendicular to 
 
 Let ![rho mass](./images/rho_mass.png) be the mass-density (e.g. in kg/m^3) and mass of the parcel.
 
-Newton's Second Law then says that ![dF = dP dA = -dA dr rho a](./images/newton_2nd.png) (the minus sign comes in because gravity points downwards).  This equation is easily simplified to
+Newton's Second Law then says that ![newton 2nd](./images/newton_2nd.png) (the minus sign comes in because gravity points downwards).  This equation is easily simplified to
 
 ![hydrostatic equilibrium](./images/hydrostatic_equilibrium.png)
 
