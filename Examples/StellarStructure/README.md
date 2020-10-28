@@ -14,11 +14,15 @@ Let ![deltaA,deltar](./images/delta_A_delta_r.png) be the area perpendicular to 
 
 Let ![rho mass](./images/rho_mass.png) be the mass-density (e.g. in kg/m^3) and mass of the parcel.
 
-Newton's Second Law then says that ![newton 2nd](./images/newton_2nd.png) (the minus sign comes in because gravity points downwards).  This equation is easily simplified to
+Newton's Second Law then says that
+
+![newton 2nd](./images/newton_2nd.png)
+
+This equation is easily simplified to
 
 ![hydrostatic equilibrium](./images/hydrostatic_equilibrium.png)
 
-This equation tells us that the force caused by a local radial gradient in pressure must be balanced by the gravitational force on material at the local density.
+(since the acceleration due to gravity is downwards, it is negative, so the pressure goes down with increasing height). This equation tells us that the force caused by a local radial gradient in pressure must be balanced by the gravitational force on material at the local density.
 
 The gravitational acceleration is caused by all of the mass in the object at radii below the parcel (an amazing result found by Newton - the gravity of all the material at higher radii cancels out):
 
