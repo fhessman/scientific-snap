@@ -1,4 +1,4 @@
-# <img alt="scientific-snap-icon" src="../../images/einstein_snap.png" width="50"/> Example: Stellar Parallax
+# <img alt="scientific-snap-icon" src="../../images/einstein_snap.png" width="70"/> Example: Stellar Parallax
 
 In this example, we'll see how to simulate the apparent motion of nearby stars due to the Earth's orbital motion around the Sun.
 
@@ -44,7 +44,7 @@ Now we add a star whose apparent motion we eventually want to see.
 - Create a *Sprite* for the Star.
 - Position the Star somewhere off to the side.
 - Create an *ArrowSprite* that will draw an arrow from the Earth to th Star, showing how the viewing direction changes as the Earth moves.  You can use the default *Snap!* Arrow as a good arrow end that we can easily point in the direction of the Star using - what else? - ![point towards Star](./images/point_towards_star.png).
-- Add a forever loop to *ArrowSprite* that stars when the "green flag" signal is given in which the *Sprite* first clears its graphics, then goes to the position of the Earth, points towards the Star, puts its pen down, draws a line to the position of the Star, and then pulls it's pen up again.  No matter what you do - e.g. even if you change the position of the Star by hand - the *ArrowSprite* will always point from the Earth to the Star.
+- Add a forever loop to *ArrowSprite* that starts when the "green flag" signal is given in which the *Sprite* first clears its graphics, then goes to the position of the Earth, points towards the Star, puts its pen down, draws a line to the position of the Star, and then pulls it's pen up again.  No matter what you do - e.g. even if you change the position of the Star by hand - the *ArrowSprite* will always point from the Earth to the Star.
 This part of the simulation is amazingly easy to programme!
 
 ---
