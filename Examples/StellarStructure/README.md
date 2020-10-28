@@ -6,14 +6,11 @@ In this example, we'll see how to derive the inner density structure of a star o
 
 Of course, stars and planets are seemingly infinitely complicated objects full of exotic physical processes under conditions of temperature and density that can only be partically studied in Earthly laboratories.  On the other hand, the basics are actually quite simple: these bodies have lots of mass that produces lots of gravity that wants to compress the material into smaller and smaller volumes but the pressure differences within the hot gas resists the pull of gravity, resulting in a (usually) stationary state where the two forces are balanced.  This stable state is called "hydrostatic equilibrium".  Without gravity, the pressure differences in the object would cause the object to fly apart (e.g. in Earthly weather, the wind blows from high pressure regions to low pressure regions) and without the force due to pressure differences, the object would collapse to a Black Hole.
 
-The "Equation of Hydrostatic Equilibrium" shows exactly how the two forces are balanced and can be derived from Newton's second law, Force = Mass\*Acceleration.
+The "Equation of Hydrostatic Equilibrium" shows exactly how the two forces are balanced and can be derived from Newton's second law: the force F is equal to the mass m times the acceleration a: F=m\*a.
 
 Let ![deltaP](./images/delta_P.png) be the difference in pressure between the lower and upper sides of a parcel of gas in a star or planet (only a difference in pressure produces a net local force, since the same pressure on both sides would be fully balanced and there would be no effect).
-
 Let ![deltaA,deltar](./images/delta_A_delta_r.png) be the area perpendicular to the forces and the radial thickness (stars and planets are pretty spherical so all we need consider is the radial structure).
-
 Let ![rho mass](./images/rho_mass.png) be the mass-density (e.g. in kg/m^3) and mass of the parcel.
-
 Newton's Second Law then says that
 
 ![newton 2nd](./images/newton_2nd.png)
@@ -36,16 +33,55 @@ where the relation then only depends upon two constants.  There are astronomical
 
 ![WD eqn of state](./images/wd_equation_of_state.png)
 
+In order to derive the structure of the star or planet, we have to start at the bottom, where there is a core of very dense material, and work our way up. For every step upwards in radius, the Equation of Hydrostatic Equilibrium tells us how the pressure has to change and the Equation of State tells us what the density is at that pressure. By adding more material at a larger radius, we have changed the local gravity when we try to construct the next shell of material.
+
+![delta M](./images/delta_M.png)
+
 
 ---
 
 ## Solving the equations
 
-In order to derive the structure of the star or planet, we have to start at the bottom, where there is a core of very dense material, and work our way up. For every step upwards in radius, the Equation of Hydrostatic Equilibrium tells us how the pressure has to change and the Equation of State tells us what the density is at that pressure. By adding more material at a larger radius, we have changed the local gravity when we try to construct the next shell of material.
+For our *Snap!* simulation, we first need to create some blocks for our basic physics.
+- Create a block that returns the pressure given a density: ![pressure(density)](./images/pressure.png).
+- Create a block that returns the density given a pressure: ![density(pressure)](./images/density.png).
 
-![delta M](./images/delta_M.png)
+Then, we need some variables for pressure, density, radius, and radial step. These have to be initialized, e.g.
 
-blah, blah, blah, ...
+![initialize](./images/initialize.png)
+
+For each integration step, we want to calculate things from the old values (e.g. the mass below the current radius), so it's good to store the old values before one starts changing to the new ones:
+
+![set old](./images.set_old.png)
+
+First, we calculate the new radius by incrementing it:
+
+![change r](./images/change_r.png)
+
+Next, we change the mass using a spherical shell of material with the area of a spherical shell, the thickness of the shell, and the old density
+
+![change mass](./images/change_mass.png)
+
+and the pressure:
+
+![change pressure](./images/change_pressure.png)
+
+Finally, we save the new density, calculated from the new pressure.
+Note that we're **decreasing** the pressure : if the new pressure is less than zero, we've reached the outer edge of our star/planet, so we might as well set the pressure to zero.
+
+![change density](./images/no_deg_pressure.png)
+
+All of this has to be put into a loop that starts and continues until the pressure is zero.  Since it's interesting to know just how many iterations it took to reach the surface, you probably want to keep track.
+
+![integrate](./images/integrate.png)
+
+(here, all of the calculations listed above have been put into an "update" block).
+
+---
+
+## Plot your results
+
+
 
 ---
 
@@ -56,6 +92,8 @@ blah, blah, blah, ...
 ![relativistic eqn of state](./images/rel_equation_of_state.png)
 
 How does this change affect the masses and radii of your white dwarf simulations?  The density/pressure at which there is a transition from the non-relativistic to the relativistic state can be found by setting the two equations equal to each other.  Change your equation of state so that it is non-relativistic at low densities and relativistic at high densities.
+
+- Write a simulation that calculates the radii of white dwarfs as a function of a range of masses and compare this with the observed "mass-radius relation" you can find in the internet.
 
 - The Equation of State for very dense cold material (by stellar standards) can be approximated as a power-law. Such conditions are appropriate in the cores of massive planets like Jupiter and Saturn.  Try to find an Equation of State that will give you the right mass and radius for Jupiter.  Apply your model to Saturn, Uranus and Neptune - how well does it work?
 
