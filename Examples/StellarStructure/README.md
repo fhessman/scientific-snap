@@ -8,11 +8,11 @@ Of course, stars and planets are seemingly infinitely complicated objects full o
 
 The "Equation of Hydrostatic Equilibrium" shows exactly how the two forces are balanced and can be derived from Newton's second law, Force = Mass\*Acceleration.
 
-Let ![delta P](./images/delta_P.png) be the difference in pressure between the lower and upper sides of a parcel of gas in a star or planet (only a difference in pressure produces a net local force, since the same pressure on both sides would be fully balanced and there would be no effect).
+Let ![deltaP](./images/delta_P.png) be the difference in pressure between the lower and upper sides of a parcel of gas in a star or planet (only a difference in pressure produces a net local force, since the same pressure on both sides would be fully balanced and there would be no effect).
 
-Let ![delta A,delta_r](./images/delta_A_delta_r.png) be the area perpendicular to the forces and the radial thickness (stars and planets are pretty spherical so all we need consider is the radial structure).
+Let ![deltaA,deltar](./images/delta_A_delta_r.png) be the area perpendicular to the forces and the radial thickness (stars and planets are pretty spherical so all we need consider is the radial structure).
 
-Let ![rho, rho delta A delta r](./images/rho_mass.png) be the mass-density (e.g. in km/m^3) and mass of the parcel.
+Let ![rho mass](./images/rho_mass.png) be the mass-density (e.g. in kg/m^3) and mass of the parcel.
 
 Newton's Second Law then says that ![dF = dP dA = -dA dr rho a](./images/newton_2nd.png) (the minus sign comes in because gravity points downwards).  This equation is easily simplified to
 
