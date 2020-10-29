@@ -89,21 +89,39 @@ All of this has to be put into a loop that starts and continues until the pressu
 
 ## Test your simulation
 
-If you have used a white dwarf equation of state, try to obtain a model for the white dwarf in the double-star system Sirius (the hot companion star is the brightest star in the northern sky) with a mass of 1.02 Solar Masses and a radius of 0.084 Solar Radii.  How close can you get?
+If you have used a white dwarf equation of state, try to obtain a model for the white dwarf in the double-star system Sirius called "Sirius B" (the hot companion star "A" is the brightest star in the northern sky) with a mass of 1.02 Solar Masses and a radius of 0.0084 Solar Radii.  How close can you get?
 
-Once your simulation works, try different radial steps: how does the result depend upon your choice?  How small does the step have to be relative to the final radius in order to attain 1% internal precision ("precision" means internal accuracy)?
+Once your simulation works, try different radial steps: how does the result depend upon your choice?  How small does the step have to be relative to the final radius in order to attain 1% internal precision ("precision" means internal accuracy, not absolute accuracy)?
 
 ---
 
 ## Plot your results
 
+We're not just interested in the mass and total radius: it would be interesting to see how the density and pressure change as a function of radius for different masses.  The **scientific Snap!** [PlotSprite](../../PlotSprite) enables you to do this easily.
+- Create the variable **structure** and initialize it with an empty List.
+- Every time you obtain a new pressure and density, note the results by adding a List to **structure** containing (1) the iteration number, (2) the radius, (3) the mass, (4) the density, and (5) the pressure.
 
+![add structure](./images/add_structure.png)
+
+When you're finished, you can then ask the *PlotSprite* to plot various quantities, e.g. if we want to plot radius versus density (columns 2 and 4 of *structure*), the *PlotSprite* can respond to the corresponding broadcast
+
+![plot density](./images/plot_density.png)
+
+Create other responses to, e.g. "plot pressure" or "plot mass". Note that here we have used the "set property ... to ..." block to add units to our plot's labels: we could have used the xlabel "density [kg/m^3]" to indicate the units, but by explicitly giving the units for each axis the result looks more elegant.
+
+Since you have the final report as well as the plot on the *Stage*, you'll have to make sure the corresponding Sprite goes to the front *Stage* layer
+
+![go to front layer](./images/go_to_front_layer.png)
+
+If you want a dynamic plot of one particular thing like density, you can create a plot at the beginning and ask it to update itself with the new contents of **structure** after every iteration.
 
 ---
 
 ## Improving your simuation
 
-- When a white dwarf has a large mass, the temperature within gets very large and the thermal motions of the electrons are nearly at the speed of light, which means that the degeneracy pressure has to be calculated differently using Einstein's Theory of Special Relativity.  This results in a different "relativistic" Equation of State
+- A really fancy output would contain plots of several quantities on the *Stage* all at once: create several clones of *PlotSprite* and give them widths and positions that fill the *Stage* with your results.
+
+- When a white dwarf, like Sirius B, has a large mass, the temperature within gets very large and the thermal motions of the electrons are nearly at the speed of light, which means that the degeneracy pressure has to be calculated differently using Einstein's Theory of Special Relativity.  This results in a different "relativistic" Equation of State
 
 ![relativistic eqn of state](./images/rel_equation_of_state.png)
 
