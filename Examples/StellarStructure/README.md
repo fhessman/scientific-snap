@@ -2,7 +2,7 @@
 
 In this example, we'll see how to derive the inner density structure of a star or planet by solving the equation of hydrostatic equilibrium using a simple model for the connection between the density and pressure - the "equation of state".
 
-![simulation](./images/simulation.png)
+![density plot](./images/simulation.png) ![pressure plot](./images/pressure_plot.png)
 
 
 ## Introduction
@@ -109,6 +109,8 @@ We're not just interested in the mass and total radius: it would be interesting 
 When you're finished, you can then ask the *PlotSprite* to plot various quantities, e.g. if we want to plot radius versus density (columns 2 and 4 of *structure*), the *PlotSprite* can respond to the corresponding broadcast
 
 ![plot density](./images/plot_density.png)
+
+This block was used to create the plot shown at the beginning.
 
 Create other responses to, e.g. "plot pressure" or "plot mass". Note that here we have used the "set property ... to ..." block to add units to our plot's labels: we could have used the xlabel "density [kg/m^3]" to indicate the units, but by explicitly giving the units for each axis the result looks more elegant.
 
