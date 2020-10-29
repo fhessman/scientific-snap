@@ -57,7 +57,7 @@ where, here, the initial mass has been set to a small sphere of radius "dr" with
 
 For each integration step, we want to calculate things from the old values (e.g. the mass below the current radius), so it's good to store the old values before one starts changing to the new ones:
 
-![set old](./images.set_old.png)
+![set old](./images/set_old.png)
 
 First, we calculate the new radius by incrementing it:
 
