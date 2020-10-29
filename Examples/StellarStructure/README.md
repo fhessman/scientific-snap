@@ -10,22 +10,15 @@ In this example, we'll see how to derive the inner density structure of a star o
 Of course, stars and planets are seemingly infinitely complicated objects full of exotic physical processes under conditions of temperature and density that can only be partically studied in Earthly laboratories.  On the other hand, the basics are actually quite simple: these bodies have lots of mass that produces lots of gravity that wants to compress the material into smaller and smaller volumes but the pressure differences within the hot gas resists the pull of gravity, resulting in a (usually) stationary state where the two forces are balanced.  This stable state is called "hydrostatic equilibrium".  Without gravity, the pressure differences in the object would cause the object to fly apart (e.g. in Earthly weather, the wind blows from high pressure regions to low pressure regions) and without the force due to pressure differences, the object would collapse to a Black Hole.
 
 The "Equation of Hydrostatic Equilibrium" shows exactly how the two forces are balanced and can be derived from Newton's second law: the force F is equal to the mass m times the acceleration a: F=m\*a.
-
-Let ![deltaP](./images/delta_P.png) be the difference in pressure between the lower and upper sides of a parcel of gas in a star or planet (only a difference in pressure produces a net local force, since the same pressure on both sides would be fully balanced and there would be no effect).
-Let ![deltaA,deltar](./images/delta_A_delta_r.png) be the area perpendicular to the forces and the radial thickness (stars and planets are pretty spherical so all we need consider is the radial structure).
-Let ![rho mass](./images/rho_mass.png) be the mass-density (e.g. in kg/m^3) and mass of the parcel.
+- Let ![deltaP](./images/delta_P.png) be the difference in pressure between the lower and upper sides of a parcel of gas in a star or planet (only a difference in pressure produces a net local force, since the same pressure on both sides would be fully balanced and there would be no effect).
+- Let ![deltaA,deltar](./images/delta_A_delta_r.png) be the area perpendicular to the forces and the radial thickness (stars and planets are pretty spherical so all we need consider is the radial structure).
+- Let ![rho mass](./images/rho_mass.png) be the mass-density (e.g. in kg/m^3) and mass of the parcel.
 Newton's Second Law then says that
-
-![newton 2nd](./images/newton_2nd.png)
-
+![newton 2nd](./images/newton_2nd.png)</br>
 This equation is easily simplified to
-
-![hydrostatic equilibrium](./images/hydrostatic_equilibrium.png)
-
+![hydrostatic equilibrium](./images/hydrostatic_equilibrium.png)</br>
 (since the acceleration due to gravity is downwards, it is negative, so the pressure goes down with increasing height). This equation tells us that the force caused by a local radial gradient in pressure must be balanced by the gravitational force on material at the local density.
-
-The gravitational acceleration is caused by all of the mass in the object at radii below the parcel (an amazing result found by Newton - the gravity of all the material at higher radii cancels out):
-
+- The gravitational acceleration is caused by all of the mass in the object at radii below the parcel (an amazing result found by Newton - the gravity of all the material at higher radii cancels out):
 ![gravity](./images/gravity.png)
 
 In order to make things simple, we can assume that there is a simple relation between our two gaseous properties, pressure and density, which one calls the "Equation of State".  In reality, this physics/chemistry is quite complicated, but there are some situations where a simple relation holds or can be used as an empirical approximation.  One of the simplest assumptions is that the pressure only depends upon some power of the density,
