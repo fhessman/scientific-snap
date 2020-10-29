@@ -2,6 +2,9 @@
 
 In this example, we'll see how to derive the inner density structure of a star or planet by solving the equation of hydrostatic equilibrium using a simple model for the connection between the density and pressure - the "equation of state".
 
+![simulation](./images/simulation.png)
+
+
 ## Introduction
 
 Of course, stars and planets are seemingly infinitely complicated objects full of exotic physical processes under conditions of temperature and density that can only be partically studied in Earthly laboratories.  On the other hand, the basics are actually quite simple: these bodies have lots of mass that produces lots of gravity that wants to compress the material into smaller and smaller volumes but the pressure differences within the hot gas resists the pull of gravity, resulting in a (usually) stationary state where the two forces are balanced.  This stable state is called "hydrostatic equilibrium".  Without gravity, the pressure differences in the object would cause the object to fly apart (e.g. in Earthly weather, the wind blows from high pressure regions to low pressure regions) and without the force due to pressure differences, the object would collapse to a Black Hole.
