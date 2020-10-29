@@ -42,13 +42,18 @@ In order to derive the structure of the star or planet, we have to start at the 
 
 ## Solving the equations
 
-For our *Snap!* simulation, we first need to create some blocks for our basic physics.
+For our *Snap!* simulation, we first need to create some blocks for our basic physics and variables for our necessary physical quantities.
 - Create a block that returns the pressure given a density: ![pressure(density)](./images/pressure.png).
-- Create a block that returns the density given a pressure: ![density(pressure)](./images/density.png).
+- Create a block that returns the density given a pressure (just invert the equation): ![density(pressure)](./images/density.png).
+- Create some variables for pressure, density, radius (here, called "r"), and radial step (here called "dr" for "delta-r").
 
-Then, we need some variables for pressure, density, radius, and radial step. These have to be initialized, e.g.
+The calculation needs some start values for the central density and the radial step.  The higher the density, the more mass your object will end up with.  The smaller the radial integration step, the finer your integration will be but the longer it will take.
+
+After the two input variables have been set, we can initialized the rest, e.g.
 
 ![initialize](./images/initialize.png)
+
+where, here, the initial mass has been set to a small sphere of radius "dr" with the intial density.
 
 For each integration step, we want to calculate things from the old values (e.g. the mass below the current radius), so it's good to store the old values before one starts changing to the new ones:
 
@@ -66,16 +71,27 @@ and the pressure:
 
 ![change pressure](./images/change_pressure.png)
 
-Finally, we save the new density, calculated from the new pressure.
 Note that we're **decreasing** the pressure : if the new pressure is less than zero, we've reached the outer edge of our star/planet, so we might as well set the pressure to zero.
 
-![change density](./images/no_deg_pressure.png)
+![if pressure negative](./images/if_pressure_negative.png)
+
+Finally, we save the new density, calculated from the new pressure.
+
+![set density](./images/set_density.png)
 
 All of this has to be put into a loop that starts and continues until the pressure is zero.  Since it's interesting to know just how many iterations it took to reach the surface, you probably want to keep track.
 
 ![integrate](./images/integrate.png)
 
-(here, all of the calculations listed above have been put into an "update" block).
+(here, all of the calculations for a single step listed above have been put into an "update" block).
+
+---
+
+## Test your simulation
+
+If you have used a white dwarf equation of state, try to obtain a model for the white dwarf in the double-star system Sirius (the hot companion star is the brightest star in the northern sky) with a mass of 1.02 Solar Masses and a radius of 0.084 Solar Radii.  How close can you get?
+
+Once your simulation works, try different radial steps: how does the result depend upon your choice?  How small does the step have to be relative to the final radius in order to attain 1% internal precision ("precision" means internal accuracy)?
 
 ---
 
@@ -95,7 +111,7 @@ How does this change affect the masses and radii of your white dwarf simulations
 
 - Write a simulation that calculates the radii of white dwarfs as a function of a range of masses and compare this with the observed "mass-radius relation" you can find in the internet.
 
-- The Equation of State for very dense cold material (by stellar standards) can be approximated as a power-law. Such conditions are appropriate in the cores of massive planets like Jupiter and Saturn.  Try to find an Equation of State that will give you the right mass and radius for Jupiter.  Apply your model to Saturn, Uranus and Neptune - how well does it work?
+- The Equation of State for very dense cold material (by stellar standards) can be also be approximated as a power-law. Such conditions are appropriate in the cores of massive planets like Jupiter and Saturn.  Try to find an Equation of State that will give you the right mass and radius for Jupiter.  Apply your model to Saturn, Uranus and Neptune - how well does it work?
 
-- What power-law equation of State will produce a reasonable model for the structure of the Sun?
+- What power-law equation of State will produce a reasonable empirical model for the structure of the Sun (where the radius and mass come out fairly accurately)?
 
