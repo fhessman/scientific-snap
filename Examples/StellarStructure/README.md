@@ -127,9 +127,7 @@ If you want a dynamic plot of one particular thing like density, you can create 
 - A really fancy output would contain plots of several quantities on the *Stage* all at once: create several clones of *PlotSprite* and give them widths and positions that fill the *Stage* with your results.
 
 - When a white dwarf, like Sirius B, has a large mass, the temperature within gets very large and the thermal motions of the electrons are nearly at the speed of light, which means that the degeneracy pressure has to be calculated differently using Einstein's Theory of Special Relativity.  This results in a different "relativistic" Equation of State
-
 ![relativistic eqn of state](./images/rel_equation_of_state.png)
-
 How does this change affect the masses and radii of your white dwarf simulations?  The density/pressure at which there is a transition from the non-relativistic to the relativistic state can be found by setting the two equations equal to each other.  Change your equation of state so that it is non-relativistic at low densities and relativistic at high densities.
 
 - Write a simulation that calculates the radii of white dwarfs as a function of a range of masses and compare this with the observed "mass-radius relation" you can find in the internet.
