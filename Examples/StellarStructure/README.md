@@ -30,6 +30,7 @@ In order to derive the structure of the star or planet, we have to start at the 
 ![delta M](./images/delta_M.png)
 
 The Equation of Hydrostatic Equilibrium above then gives us the change in the pressure.
+
 ---
 
 ## Solving the equations
