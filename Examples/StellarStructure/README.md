@@ -15,26 +15,21 @@ The "Equation of Hydrostatic Equilibrium" shows exactly how the two forces are b
 - Let ![rho mass](./images/rho_mass.png) be the mass-density (e.g. in kg/m^3) and mass of the parcel.
 Newton's Second Law then says that<br/>
 ![newton 2nd](./images/newton_2nd.png)<br/>
-This equation is easily simplified to<br/>
+This equation is easily simplified to the final *Equation of Hydrostatic Equilibrium*:<br/>
 ![hydrostatic equilibrium](./images/hydrostatic_equilibrium.png)</br>
 (since the acceleration due to gravity is downwards, it is negative, so the pressure goes down with increasing height). This equation tells us that the force caused by a local radial gradient in pressure must be balanced by the gravitational force on material at the local density.
-- The gravitational acceleration is caused by all of the mass in the object at radii below the parcel (an amazing result found by Newton - the gravity of all the material at higher radii cancels out):
-
+- The gravitational acceleration is caused by all of the mass in the object at radii below the parcel (an amazing result found by Newton - the gravity of all the material at higher radii cancels out):<br/>
 ![gravity](./images/gravity.png)
-
-In order to make things simple, we can assume that there is a simple relation between our two gaseous properties, pressure and density, which one calls the "Equation of State".  In reality, this physics/chemistry is quite complicated, but there are some situations where a simple relation holds or can be used as an empirical approximation.  One of the simplest assumptions is that the pressure only depends upon some power of the density,
-
-![eqn of state](./images/equation_of_state.png)
-
-where the relation then only depends upon two constants.  There are astronomical objects that obey such a simple relationship, e.g. white dwarfs, the burned out cores of  Sun-like stars that have ended their active phase of energy production and cast off most of their mass.  Such cores are so dense that the pressure is due to the refusal of the electrons to be squeezed any farther, a quantum-mechanical effect called "degeneracy".  For moderate temperatures and densities (at least by white dwarf standards), the Equation of State is a reasonably simple function of physical constants and equal to
-
+- In order to make things simple, we can assume that there is a simple relation between our two gaseous properties, pressure and density, which one calls the "Equation of State".  In reality, this physics/chemistry is quite complicated, but there are some situations where a simple relation holds or can be used as an empirical approximation.  One of the simplest assumptions is that the pressure only depends upon some power of the density,<br/>
+![eqn of state](./images/equation_of_state.png)<br/>
+where the relation then only depends upon two constants.  There are astronomical objects that obey such a simple relationship, e.g. white dwarfs, the burned out cores of  Sun-like stars that have ended their active phase of energy production and cast off most of their mass.  Such cores are so dense that the pressure is due to the refusal of the electrons to be squeezed any farther, a quantum-mechanical effect called "degeneracy".  For moderate temperatures and densities (at least by white dwarf standards), the Equation of State is a reasonably simple function of physical constants and equal to<br/>
 ![WD eqn of state](./images/wd_equation_of_state.png)
 
 In order to derive the structure of the star or planet, we have to start at the bottom, where there is a core of very dense material, and work our way up. For every step upwards in radius, the Equation of Hydrostatic Equilibrium tells us how the pressure has to change and the Equation of State tells us what the density is at that pressure. By adding more material at a larger radius, we have changed the local gravity when we try to construct the next shell of material.
 
 ![delta M](./images/delta_M.png)
 
-
+The Equation of Hydrostatic Equilibrium above then gives us the change in the pressure.
 ---
 
 ## Solving the equations
