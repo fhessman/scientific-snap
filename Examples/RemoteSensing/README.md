@@ -34,7 +34,7 @@ At this point, *phyphox* is willing to share the data with your *Snap!* programm
 (you may have to change the output format in our browser to see this raw detail).
 This information is in the form of a dictionary - a set of keyword:value pairs contained within two curly brakets (in "JSON" format, a format commonly used between programmes dealing with the internet).  Literally, this particular information says that there is a "buffer" containing nothing, there is a "status" which is a dictionary with the keyword entries "countDown", "session", "measuring", and "timedRun", each with a value (these keywords and values aren't interesting now).  While one could parse this string by hand, looking for dictionaries in dictionaries in dictionaries, the *Snap!* "Web Services" library provides blocks to do this for you.
 
-![web services library](./images/web_services_library.png)
+![web services library](./images/import_library_web_services.png)
 
 For instance, when the output above is passed to the "listify" block (transforms JSON into lists of lists), it transforms the JSON into a list of two lists (the "buffer" and the "status" lists).
 
