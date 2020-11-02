@@ -12,24 +12,27 @@ Part of the modern digital revolution is the possibility of easily gathering lar
 
 ## phyphox
 
-This App was produced by the University of Aachen in Germany to make the multiple devices in a mobile phone available as an amazing array of physical sensors: position (GPS), 3-D acceleration, rotation, pressure, microphone, magnetic field strength, and brightness.  While an amazing array of experiments are organized within the App to make the phone self-contained (e.g. Doppler measurements using the speaker and microphone!), the App also offers the possibility of accessing the sensors' values via WIFI and a simple HTTP protocol.
+![phyphox](./images/phyphox.png)
+
+This App has been produced by the University of Aachen in Germany to make the multiple devices in a mobile phone available as an amazing array of physical sensors: position (GPS), 3-D acceleration, rotation, pressure, microphone, magnetic field strength, and brightness.  While an equally amazing array of experiments are organized within the App to make the phone self-contained (e.g. Doppler velocity measurements using the speaker and microphone!), the App also offers the possibility of accessing the sensors' values via WIFI and a simple HTTP protocol.
 
 After you have installed and started the App (see [this link](https://phyphox.org/)),
 - pick out the equivalent experiment (e.g. );
 - select "allow remote access" in the menu and confirm that you want to allow *Snap!* to access your phone;
-- you will see the internet address of the phone at the bottom, e.g. "http://192.168.0.13:8080";
-- if you enter this address in a browser window, you will see the standard *phyphox* interface on your second device; this is a good way to double-check your connection;
-- start the *phyphox* experiment by pressing the triangular "run" button.
+- you will see the internet address of the phone at the bottom, e.g. "http://192.168.0.13:8080" ("http" is the protocoll, "192.168.0.13" is the internet address, and "8080" is the so-called "port-number");
+- if you enter this address in a browser window, you will see the same standard *phyphox* interface on your second device; this is a good way to double-check your connection;
+- start an appropriate *phyphox* experiment, e.g. "Acceleration (without g)", and press the triangular "run" button to start the measurements.
 
 At this point, *phyphox* is willing to share the data with your *Snap!* programme.  You can get the status of the measurements by giving the following URL in a browser:
 
 <tt>http://192.168.0.13/get?status</tt>
 
-(use the correct IP address).  *phyphox* should return something like
+(use the correct IP address at the bottom; if nothing happens, make sure that *phyphox* is really measuring).  *phyphox* should return something like the following in your browser:
 
 <tt>{"buffer":{},"status":{"countDown":0,"session":"13277696","measuring":true,"timedRun":false}}</tt>
 
-which is information in the form of a dictionary - a set of keyword:value pairs (in "JSON" format, a format commonly used between programmes dealing with the internet).  Literally, this information says that there is a "buffer" containing nothing, there is a "status" which is a dictionary with the entries "countDown", "session", "measuring", and "timedRun", each with a value.  Apparently, when we queried *phyphox*, it wasn't counting down (waiting for something to begin), it identified the remote connection with a  session number ("13277696"), it was indeed measuring, but the "Run" wasn't timed (i.e. it was running until one stopped it).  While one could parse this string by hand, looking for dictionaries in dictionaries in dictionaries, the *Snap!* "Web Services" library provides blocks to do this for you.
+(you may have to change the output format in our browser to see this raw detail).
+This information is in the form of a dictionary - a set of keyword:value pairs contained within two curly brakets (in "JSON" format, a format commonly used between programmes dealing with the internet).  Literally, this particular information says that there is a "buffer" containing nothing, there is a "status" which is a dictionary with the keyword entries "countDown", "session", "measuring", and "timedRun", each with a value (these keywords and values aren't interesting now).  While one could parse this string by hand, looking for dictionaries in dictionaries in dictionaries, the *Snap!* "Web Services" library provides blocks to do this for you.
 
 ![web services library](./images/web_services_library.png)
 
