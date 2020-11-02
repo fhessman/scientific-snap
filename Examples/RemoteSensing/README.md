@@ -52,7 +52,7 @@ which yields the final values, two numbers and two "booleans" (trues or falses).
 
 This method of accessing the information is cumbersome and error-prone.  Since we have dictionaries, why don't we use them via the Web Service Library's "value at key ... of ..." block. Then, to get at a particular value, we need only follow the hierarchy of dictionary keys:
 
-![value at key status of](./images/value_at_key_status_of.png)
+![value at key status of](./images/value_at_key_status.png)
 
 
 Each of the *phyphox* sensors has it's own *phyphox* name:
@@ -76,3 +76,8 @@ and get the response
 
 ![values at keys](./images/values_at_keys.png)
 
+## Obtaining a measurement sequence
+
+Now that we can access individual measurements, we can also ask for and plot a whole sequence of values.  Of course, *Snap!* will never do as well (especially as quickly) as the original *phyphox* App, but we shall see that measurements can be taken quickly enough for the experiment to be interesting, especially because we can process the raw data on our own and even combine multiple sensor sources (multiple phones).
+
+...
