@@ -1,6 +1,6 @@
 # <img alt="scientific-snap-icon" src="../../images/einstein_snap.png" width="70"/> Example: Capital Accumulation
 
-In this example, we'll see how to create an economic model for the evolution of capital in a business dynasty like the Rockefellers or the Krupps.
+In this example, we'll see how to create an economic model for the evolution of capital in a long-term family business.
 
 ![simulation](./images/simulation.png)
 
@@ -92,6 +92,7 @@ The *PlotSprite* responds to the broadcast by extracting the appropriate columns
 
 Once your model works, 
 - study how the different parameters effects the long-term evolution of the family business: given realisitic estimates of things like tax rates, what **yearly returns on capital** are necessary for different types of businesses in order to maintain a constant amount of capital corrected for the overall **economic growth rate**?
+- The results shown in the figure at the top suggest that that particular model resulted in the growth of capital following a given rate of general economic growth, but compare the total capital versus the capital per owner or simply the number of owners with time versus the capital (e.g. the increase in the number of restaurants versus the number of restaurant managing owners).
 - Can you model the growth of family dynasties like Rockefeller and Krupp?
-- The growth of income has historically trailed the growth of captial, sometimes by large amounts: the difference between the rich and very rich versus the vast mass of normal people has increased rapidly in the last decades.  The famous French economist Thomas Picketty caused an uproar in economic circles by arguing that the only way to prevent the negative social effects of an increasingly dominant rich class is by raising income and estate taxes: for a given type of business (e.g. rental housing), can you estimate what taxes would be necessary to maintain a long-term *status quo* where the business grows at the rate that normal income grows?  
-
+- If one wants to model a corporation rather than a family business, then all one has to due is to make the **lifetime** longer than the simulation time (so that the capital is not split to separate entities but remains in the possession of the entity "shareholders" (the capital per shareholder is a much more dynamic quantity than the capital per number of family owners).  How do the results of your investigations change?
+- The growth of income has historically trailed the growth of captial, sometimes by large amounts: the difference between the rich and very rich versus the vast mass of normal people has increased rapidly in the last decades.  The famous French economist Thomas Picketty caused an uproar in economic circles by arguing that the only way to prevent the negative social effects of an increasingly dominant rich class is by raising income and estate taxes: for a given type of business (e.g. rental housing), can you estimate what taxes would be necessary to maintain a long-term *status quo* where the business grows at the rate that normal income grows?  What is the answer if you consider a corporation rather than a family business?
