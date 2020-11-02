@@ -76,6 +76,10 @@ and get the response
 
 ![values at keys](./images/values_at_keys.png)
 
+Up until now, we have been reading the *phyphox* data using an external browser, typing the HTTP command into the browser address panel.  Now, we want to do this using *Snap!*.
+
+...
+
 ## Obtaining a measurement sequence
 
 Now that we can access individual measurements, we can also ask for and plot a whole sequence of values.  Of course, *Snap!* will never do as well (especially as quickly) as the original *phyphox* App, but we shall see that measurements can be taken quickly enough for the experiment to be interesting, especially because we can process the raw data on our own and even combine multiple sensor sources (multiple phones).
