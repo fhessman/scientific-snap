@@ -75,7 +75,7 @@ While one can look at the raw numbers, it is much more enlightening to see a plo
 - Import the *PlotSprite*.
 - Create a (global) "results" list and initialize it as an empty list.
 - Every year of the simulation, add that year's results (year number, amount of capital, amount of income, number of owners, capital per owner,....) as a list to the results list.
-- For convenience, you can add the amount of growth expected from the **economic growth rate** :<BR/>
+- For convenience, you can add the amount of growth expected from the **economic growth rate** : each year, the general economic activity grows by a factor of 1-(growth-rate), so the amount of growth after a number **year** of years is<BR/>
 ![economic growth](./images/economic_growth.png)<BR/>
 - At the end of each year's calculations (or maybe after a decade of business), ask the *PlotSprite* to plot the results
 
