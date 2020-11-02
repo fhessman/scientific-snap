@@ -36,19 +36,24 @@ This information is in the form of a dictionary - a set of keyword:value pairs c
 
 ![web services library](./images/import_library_web_services.png)
 
-For instance, when the output above is passed to the "listify" block (transforms JSON into lists of lists), it transforms the JSON into a list of two lists (the "buffer" and the "status" lists).
+For instance, when the output above is passed to the "listify" block (transforms JSON into lists of lists), it transforms the JSON into a list of two lists, corresponding to the original "buffer" and the "status" lists but including the keywords of the dictionary.
 
 ![listify](./images/listify.png)
 
-If we are interested in the "status" list, we access it using
+If we are interested in the first "status" list, we access it using
 
 ![listify status](./images/listify_status.png)
 
-which gives us a list containing the name of the list ("status") and its contents, 4 entries.  Yes, to go down even further, we need another level of probing with another "item ... of .." block:
+which gives us a list containing the keyword "status" and the contents, 4 list entries.  Yes, to go down even further, we need another level of probing with another "item ... of .." block:
 
 ![listify status items](./images/listify_status_items.png)
 
 which yields the final values, two numbers and two "booleans" (trues or falses).
+
+This method of accessing the information is cumbersome and error-prone.  Since we have dictionaries, why don't we use them via the Web Service Library's "value at key ... of ..." block. Then, to get at a particular value, we need only follow the hierarchy of dictionary keys:
+
+![value at key status of](./images/value_at_key_status_of.png)
+
 
 Each of the *phyphox* sensors has it's own *phyphox* name:
 
@@ -67,7 +72,7 @@ and get the response
 
 <tt>{"buffer":{"accX":{"updateMode":"single","size":0,"buffer":[-0.11232910573482514]}}, ...}</tt>
 
-(the uninteresting "status" info represented by "..." has been removed to make things look simpler). This time, the main "buffer" contains a dictionary with an entry for the x-acceleration "accX" which contains, among other things, a "buffer" with the actual sensor value, "-0.11232910573482514", in the SI units "m/s^2". We could try to use "item of (item of (item of ...))" but this only uses the position in the lists, not the keys of the dictionary.  A better way is to use the Library's "value at key ... of ..." block. Then, to get at this value, we need only follow the hierarchy of dictionary keys: to get at the "buffer" within "accX" within the main "buffer", we can use
+(the uninteresting "status" info represented by "..." has been removed to make things look simpler). This time, the main "buffer" contains a dictionary with an entry for the x-acceleration "accX" which contains, among other things, a "buffer" with the actual sensor value, "-0.11232910573482514", in SI units (m/s^2).  To get at this value, we need only follow the hierarchy of dictionary keys: to get at the "buffer" within "accX" within the main "buffer", we can use
 
 ![values at keys](./images/values_at_keys.png)
 
