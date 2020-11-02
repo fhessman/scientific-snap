@@ -64,7 +64,7 @@ Whenever one generation dies out,
 - the number of active persons is reduced by the number of deaths and increased by the number of decendents; effectively, this means multiplying the previous **number of owners** by the **number of children**;
 The way to handle the generational change is to wait until the number of years is a whole multiple of the **lifetime** of each generation (e.g. if the **lifetime** is 65 years, then changes will occur for years 65, 130, 195, ...).  This calculation is simply using the "mod" function that returns the remainder after integer divition (e.g. "194 mod 65" is equal to 64 but "195 mod 65" is 0).
 
-![if year mod lifetime = 0](../images/if_year_mod_lifetime.png)
+![if year mod lifetime = 0](./images/if_year_mod_lifetime.png)
 
 
 ---
