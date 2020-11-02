@@ -76,9 +76,13 @@ and get the response
 
 ![values at keys](./images/values_at_keys.png)
 
-Up until now, we have been reading the *phyphox* data using an external browser, typing the HTTP command into the browser address panel.  Now, we want to do this using *Snap!*.
+Up until now, we have been reading the *phyphox* data using an external browser, typing the HTTP command into the browser address panel.  Now, we want to do this using *Snap!*:
 
-...
+![listify url](./images/listify_url.png)
+
+... hmmmmm ...
+
+---
 
 ## Obtaining a measurement sequence
 
