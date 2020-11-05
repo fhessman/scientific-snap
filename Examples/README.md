@@ -23,11 +23,11 @@ Here is an indication of the relative programming difficulty (the undocumented e
 | [Saturn V Rocket](./SaturnVRocket) | Simulating the launch of a rocket | beginner to intermediate (once you understand the physics) | physics |
 | [Expansion of the Universe](./ExpansionOfTheUniverse) | Simulating the effects of the expansion of the Universe ("Hubble's Law") | beginner to intermediate | astronomy |
 | [Eclipsing Binary](./EclipsingBinary)  | Simulating the appearance of an eclipse binary star system and measuring the lightcurve  | intermediate  | astronomy |
-| ([Exoplanet Detection](./ExoplanetDetection))  | Simulating the spectroscopic signal of an exoplanet host star | intermediate  | astronomy |
-| ([Autonomous Driving](./AutonomousDriving)) | Simulating an autonomously driving car  | beginner to advanced | engineering |
-| ([Traffic Jam](./TrafficJam))  | Simulating a traffic jam caused by heavy traffic  | intermediate to advanced | engineering |
+| (Exoplanet Detection)  | Simulating the spectroscopic signal of an exoplanet host star | intermediate  | astronomy |
+| (Autonomous Driving) | Simulating an autonomously driving car  | beginner to advanced | engineering |
+| (Traffic Jam)  | Simulating a traffic jam caused by heavy traffic  | intermediate to advanced | engineering |
 | [Stellar Structure](./StellarStructure)  | Solving the hydrostatic equilibrium equation for a star or planet  | advanced | physics/astronomy |
-| ([Parameter Fitting](./ParameterFitting))  | Fitting a model to data using a Monte Carlo Markov Process  | advanced  | mathematics |
+| (Parameter Fitting)  | Fitting a model to data using a Monte Carlo Markov Process  | advanced  | mathematics |
 
 If the projects are not yet filled, that's only because we haven't gotten around to writing it up.
 
