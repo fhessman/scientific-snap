@@ -1,4 +1,4 @@
-# <img alt="scientific-snap-icon" src="../../images/einstein_snap.png" width="70"/> Example: Traffic Jam
+# <img alt="scientific-snap-icon" src="../../images/einstein_snap.png" width="70"/> Example: Blackbody Explorer
 
 
 This finished project lets you explore the spectrum of a "blackbody" - a perfectly emitting hot surface characterized only by it's temperature.
