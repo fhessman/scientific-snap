@@ -63,9 +63,9 @@ When the galaxy receives a "show redshift" broadcast and isn't the **observer**,
 
 ![if not is observer identical to myself](./images/if_not_is_observer.png)
 
-it has to tell it's arrow to re-draw itself.  For that it needs to get the new distance to the (potentially new) **observer**, scaled by some factor which gives the length of the arrow: ![distance_to_observer](./images/distance_to_observer.png).  Then, it has to get the direction to the observer - ![direction away from observer](./images/direction_away_from_observer.png) - and tell it's arrow to 
+it has to tell it's arrow to re-draw itself.  For that it needs to get the new distance to the (potentially new) **observer**, scaled by some factor which gives the length of the arrow: ![distance_to_observer](./images/distance_to_observer.png).  Then, it has to tell it's arrow to 
 - drop it's pen;
-- point in the right direction, which is opposite of the normal direction **to** an object, so you'll need to add/subtract 180 degrees to get the right direction ![opposite direction to observer](./images/opposite_direction_to_observer.png);
+- point in the right direction, which is opposite of the normal direction **to** an object, so you'll need to add/subtract 180 degrees to get the right direction ![direction away from observer](./images/direction_away_from_observer.png);
 - move the number of steps needed to produce an arrow of the right length;
 - pull up it's pen again; and
 - show itself.
