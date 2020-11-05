@@ -37,7 +37,7 @@ when the "green flag" is clicked, set the basic properties of the *Sprite*: size
 
 When the *ArrowSprite* is used, it's galaxy will have to position it, point it in the right direction, and tell it how far to draw.
 
-When a new simulation is made, we will need to tell all clones to clear their graphics, so each *ArrowSprite* clone should respond to a "clear" broadcast and delete itself:
+When a new simulation is made, we will need to tell all clones to clear their graphics, so each *ArrowSprite* clone should respond to a "clear" broadcast by clearing and deleting itself.
 
 ![when I arrow receives clear](./images/when_arrow_receives_clear.png)
 
@@ -52,7 +52,7 @@ When a *GalaxySprite* clone is created,
 - it's costume needs to be set and sized;
 - it needs to set it's **my arrow** variable to a new clone of *ArrowSprite*;<BR/>
 ![set my arrow to a new clone of ArrowSprite](./images/set_my_arrow.png)<BR/>
-- it needs to position itself randomly on the *Stage* (use ![pick random to](./images/pick_random_to.png) along with the current size of the *Stage* using, e.g. ![width of stage](./images/width_of_stage.png) to get truly random positions no matter how big your *Stage* is);
+- it needs to position itself randomly on the *Stage* (use ![pick random to](./images/pick_random_to.png) along with the current size of the *Stage* using, e.g. ![width of Stage](./images/width_of_Stage.png) to get truly random positions no matter how big your *Stage* is);
 - it needs to tell it's *ArrowSprite* to go to the same position as the galaxy;<BR/>
 ![tell my arrow to go to](./images/tell_my_arrow_to_go_to.png)<BR/>
 - and then it should show itself.
@@ -75,6 +75,8 @@ Finally, when a galaxy is clicked, it should become the new observer: within a "
 - to broadcast that there is a "new observer" and wait for all to respond (so that they can all turn off their arrows);
 - to set the global **observer** variable to ![object myself](./images/object_myself.png); and
 - to broadcast "show redshift" so that all the other galaxies can show their arrows pointing away from the new **observer**.
+
+When a new simulation is made, each *GalaxySprite* clone should respond to a "clear" broadcast by deleting itself.
 
 ---
 
