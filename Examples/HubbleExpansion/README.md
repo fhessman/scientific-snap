@@ -96,5 +96,7 @@ By repeatedly clicking the "green flag", you'll get new universes filled with ne
 
 ## Improvments to your simulation
 
-Of course, the simulation above doesn't actually show the expansion itself: the lengths of the arrows are proportional to the distance, indicating what one would see.  Change your simulation so that an actual expanding universe occurs: start all of the galaxies near the centre and have them expand away from that centre, adjusting their arrow's lengths.  Strictly speaking, this is a bad simulation, since the Universe didn't start from a centre and expand out into space: it creates its own space as it goes, so probably a **better** simulation effect is simply to pull on the size tab of the *Stage* and make your Universe expand!
+Of course, the simulation above doesn't actually show the expansion itself: the lengths of the arrows are proportional to the distance, indicating what one would see.  Change your simulation so that an actual expanding universe occurs: start all of the galaxies near the centre and have them expand away from that centre, adjusting their arrow's lengths.
+
+Strictly speaking, this is a bad simulation, since the Universe didn't start from a centre and expand out into space: it creates its own space as it goes, so probably a **better** simulation effect is simply to pull on the size tab of the *Stage* and make your Universe expand!  Even this isn't realistic, since the expansion of the Universe doesn't result in the expansion of the galaxies, so you'd have to actually increase the **pixel** size of the *Stage*.
 
