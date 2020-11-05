@@ -88,7 +88,7 @@ All that is left is to have the *Simulation* *Sprite*  respond to a "green flag"
 - create a large number of *GalaxySprite* clones; and
 - tell all the galaxies to show their redshift arrows relative to the current **observer** (the last clone created).
 
-![when green flag](./images/when_green_flag.png)
+![when green flag clicked](./images/when_green_flag_clicked.png)
 
 By repeatedly clicking the "green flag", you'll get new universes filled with new galaxies and new observers. Within any universe, if you click a galaxy, it will become the new **observer** and you'll see the motion of the other galaxies due to the expanding universe in the eyes of a new observer.  No matter what galaxy you click, the observer will always see the same effect but from different galaxies with different arrows.
 
