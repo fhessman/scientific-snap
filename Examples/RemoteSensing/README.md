@@ -6,7 +6,7 @@ In this example, we'll see how to download remote sensor data from a mobile phon
 
 ## Introduction
 
-Part of the modern digital revolution is the possibility of easily gathering large amounts of data, from which, e.g., new information can be derived (e.g. in marketing) or public warnings can be given (e.g. traffic jams found by mobile phone densities, extreme weather events from networks of weather stations).  Rarely are the raw data themselves interesting - almost always, one gathers raw information from multiple sensors and then processes that raw information into useful information. For example, hundreds of mobile-phone contacts are necessary to define a traffic situation accurately in a small urban region because the densities not the contacts themselves are needed.
+Part of the modern digital revolution is the possibility of easily gathering large amounts of data, from which, e.g., new information can be derived (e.g. in marketing) or public warnings can be given (e.g. traffic jams found by mobile phone densities, extreme weather events from networks of weather stations).  Rarely are the raw data themselves interesting - almost always, one gathers raw information from multiple sensors and then processes that raw information into useful information. For example, hundreds of mobile-phone contacts are necessary to define a traffic situation accurately in a small urban region because the densities - not the contacts themselves - are needed.
 
 ---
 
@@ -87,5 +87,19 @@ Up until now, we have been reading the *phyphox* data using an external browser,
 ## Obtaining a measurement sequence
 
 Now that we can access individual measurements, we can also ask for and plot a whole sequence of values.  Of course, *Snap!* will never do as well (especially as quickly) as the original *phyphox* App, but we shall see that measurements can be taken quickly enough for the experiment to be interesting, especially because we can process the raw data on our own and even combine multiple sensor sources (multiple phones).
+
+...
+
+---
+
+## Produce a location map of your sensor
+
+...
+
+---
+
+## A Network of sensors
+
+In order to reproduce what Google Maps does for traffic jams, we have to access a network of sensors.
 
 ...
