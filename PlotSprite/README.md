@@ -8,6 +8,7 @@ The changes from v0.2 are:
 - the plots are even nicer looking;
 - the "add histogram.." block works correctly;
 - two handy blocks were added that make it much simpler to create plots quickly by offering the use of a single organizing block: ![plot of ...](./images/plot_of.png) and ![histogram of ...](./images/histogram_of.png).
+- you can include lots of special characters like "&alpha;" using standard HTML syntax (ampersand+name+semi-colon).
 
 ---
 
