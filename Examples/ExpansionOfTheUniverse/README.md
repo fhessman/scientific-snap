@@ -17,7 +17,9 @@ The design of this simulation is very straight-forward.
 - When a *GalaxySprite* is clicked, it tells all of the other galaxies that it is the new **observer** and asks them to re-draw their *ArrowSprite* clones.
 - The length of each *ArrowSprite* clone is proportional to the distance to the current **observer**.
 
-If we put all of the "programming intelligence" into the other *Sprite*s, then the *Simulation* *Sprite* is nother other than 
+As you learn to programme in *Snap!*, you'll see that this is not a difficult exercise, since *Snap!* gives you many tools that don't need to be programmed.  For instance, in this example we'll use "broadcasts" (public messages sent to all *Sprites*) to tell the *GalaxySprite*s and *ArrowSprite*s what to do rather than trying to keep track of all the *Sprites* in a list and then talking to each of them directly.  The *ArrowSprite* will be simple to organize, since it uses *Snap!*'s Turtle graphics.
+
+Let's go through each of these parts.
 
 ---
 
@@ -32,10 +34,9 @@ Making the *Stage* black is simple:
 
 ## The *ArrowSpite*s
 
-We want a *Sprite* that can be told to draw a line from one point to another so that when it is finished, the natural *Snap!* *Sprite* arrow head is visible and points in the right direction.  Since this kind of functionality is standard *Snap!* stuff, this *Sprite* is trivial to programme:
-when the "green flag" is clicked, set the basic properties of the *Sprite*: size, color, and pen size.
+We want a *Sprite* that can be told to draw a line from one point to another so that when it is finished, the natural *Snap!* *Sprite* arrow head is visible and points in the right direction.  Since this kind of functionality is standard *Snap!* Turtle graphics, this *Sprite* is trivial to programme - most of the handling will be done by the *GalaxySprite*s.  When the *ArrowSprite* is used, it's galaxy will have to position it, point it in the right direction, and tell it how far to draw.
 
-When the *ArrowSprite* is used, it's galaxy will have to position it, point it in the right direction, and tell it how far to draw.
+When the "green flag" is clicked, set the basic properties of the *Sprite*: size, color, and pen size.
 
 When a new simulation is made, we will need to tell all clones to clear their graphics, so each *ArrowSprite* clone should respond to a "clear" broadcast by clearing and deleting itself.
 
@@ -50,12 +51,13 @@ Most of the interesting programming needs to be done for the galaxies.
 
 When a *GalaxySprite* clone is created,
 - it's costume needs to be set and sized;
-- it needs to set it's **my arrow** variable to a new clone of *ArrowSprite*;<BR/>
+- it needs to store it's own clone of *ArrowSprite*, e.g. in a private variable called "my arrow";<BR/>
 ![set my arrow to a new clone of ArrowSprite](./images/set_my_arrow.png)<BR/>
-- it needs to position itself randomly on the *Stage* (use ![pick random to](./images/pick_random_to.png) along with the current size of the *Stage* using, e.g. ![width of Stage](./images/width_of_Stage.png) to get truly random positions no matter how big your *Stage* is);
-- it needs to tell it's *ArrowSprite* to go to the same position as the galaxy;<BR/>
+- it needs to position itself randomly on the *Stage*; you can hard-wire the pixel ranges by filling in the right *Snap!* coordinate ranges in ![pick random to](./images/pick_random_to.png), but you can also ask the *Stage* for it's current size using, e.g. ![width of Stage](./images/width_of_Stage.png) to get truly random positions no matter how big your *Stage* is);
+- it might want to tell it's own *ArrowSprite* to go to the same position as itself;<BR/>
 ![tell my arrow to go to](./images/tell_my_arrow_to_go_to.png)<BR/>
-- and then it should show itself.
+but as the arrow hasn't been set yet, it shouldn't be visible so it doesn't really matter;
+- and then it should show itself (without the arrow!).
 
 When a "new observer" broadcast is received, the galaxy needs to tell it's arrow to clear it's graphics (the stem of the arrow) and hide itself for later use.
 
