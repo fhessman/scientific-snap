@@ -1,0 +1,8 @@
+# <img alt="scientific-snap icon" src="../../images/einstein_snap.png" width="75"/> Scientific Snap! Resources : Stellar Spectra
+
+Here are a few stellar spectra that can be used in your projects.  They are taken from the library of observed spectra published by Jacoby et al. (1984, Astrophysical Journal Supplement 56, 257; https://ui.adsabs.harvard.edu/abs/1984ApJS...56..257J/abstract).  The complete collection and all of the metadata associated with the spectra are available online at http://simbad.u-strasbg.fr/simbad/sim-ref?querymethod=bib&simbo=on&submit=submit+bibcode&bibcode=1984ApJS...56..257J
+
+The names of the CSV (comma-separated-value) tables gives the astronomical spectral type:  the prefixes "O","B","A","F","G","K","M" are called the spectral class and represent a temperature sequence from hot to cold; the numbers after the prefixes are sub-types from 0 (hottest) to 9 (coolest within the spectral type).
+The "V" at the end is the luminosity class indicating how luminious the star is given the spectral class: "V" is for a main-sequence star, i.e. a star consuming hydrogen in its core; "IV" is for a slightly evolved star, "III" for red giants (stars that no longer consume hydrogen in their cores and so have bloated themselves into very large stars); and "II" and "I" for so-called "supergiants" (very massive red giants).
+
+The tables consist of a column containing the wavelengths in nanometers (the human eye can see the spectral region between about 400 to 700 nm).  The 2nd column contains the observed flux in units of erg/cm^2/s/nm.  Note that the flux is the _observed_ flux, not the intrinsic flux; normally, hotter main-sequence stars would be brighter at the same distance, but can be fainter if they are much farther away.
