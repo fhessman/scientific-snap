@@ -1,4 +1,4 @@
-# <img alt="scientific-snap icon" src="./images/einstein_snap.png" width="75"/> SciSnap! : the Scientific Snap! Computing Environment
+# <img alt="scientific-snap icon" src="../images/einstein_snap.png" width="75"/> SciSnap! : the Scientific Snap! Computing Environment
 
 ## Introduction
 
