@@ -8,8 +8,6 @@ This project was developed for a German teacher's workshop, so some of the names
 ## Introduction
 
 *SciSnap!* provides a large set of tools for creating and manipulating data in the form of tables and databases.
-** Introduction
-
 While normal *Snap!* has some support for reading and writing \*.csv file, *SciSnap!* lets the user manipulate the resulting tables beyond the list-of-lists model of the normal programming environment.
 In particular, *SciSnap!* permits the use and manipulation of the table's *metadata* - the information _about_ _the_ _content_ of the table, rather than the content of the table itself.
 In the simplest form, this metadata can be the labels for table headings, but can also be as sophisticated as the header of a FITS file.
