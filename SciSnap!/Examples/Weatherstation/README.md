@@ -29,12 +29,12 @@ As a simple start,  let's create a fake "current temperature" ("aktueller Temper
 We need a simple table for recording our values for plotting.
 In *SciSnap!*, an empty table with two columns - running time and temperature ("Laufzeit" and "Temperature") - is easily created via
 
-![new_table])(./images/new_table.png)
+![new table](./images/new_table.png)
 
 Note that the first number is the numer of columns (2) and the second number is the number of data rows (0, since we haven't collected any data yet).
 Note also that we could have created an extra table for this purpose, but *SciSnap!* provides a standard place to put data, the *SciSnap!Data* variable.
 
-*Snap!* provides a simple way to record the running time via the ![reset timer]("./images/reset_timer.png") and ![timer](./images/timer.png) blocks in the "Sensing" category: once the timer has been reset, every ![timer](./images/timer.png) call reports the amount of time in seconds that has past since the reset.
+*Snap!* provides a simple way to record the running time via the ![reset timer](./images/reset_timer.png) and ![timer](./images/timer.png) blocks in the "Sensing" category: once the timer has been reset, every ![timer](./images/timer.png) call reports the amount of time in seconds that has past since the reset.
 Every time we record the temperature, we only have to add a list containing the elapsed time and the "measured" temperature to *SciSnap!Data*.
 
 ![simple data](./images/simple_data.png)
