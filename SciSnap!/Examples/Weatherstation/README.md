@@ -24,7 +24,7 @@ Unfortunately, most online weather stations don't have a direct live public repo
 
 As a simple start,  let's create a fake "current temperature" ("aktueller Temperatur") value as a reporting *Snap!* block:
 
-![aktueller Temperatur]("./images/aktueller_Temperatur.png")
+![aktueller Temperatur](./images/aktueller_Temperatur.png)
 
 We need a simple table for recording our values for plotting.
 In *SciSnap!*, an empty table with two columns - running time and temperature ("Laufzeit" and "Temperature") - is easily created via
