@@ -1,6 +1,6 @@
 # <img alt="scientific-snap-icon" src="../../../images/einstein_snap.png" width="50"/> Example: Report from a Weatherstation
 
-In this simple example, we'll see how to plot the reports from a weather station using SciSnap!'s Plotpad *Sprite*.
+In this simple example, we'll see how to plot the reports from a weather station using SciSnap!'s Plotpad **Sprite**.
 This project was developed for a German teacher's workshop, so some of the names and labels will be in German, which shouldn't be any problem for any non-German reader.
 
 ---
@@ -13,7 +13,7 @@ In particular, *SciSnap!* permits the use and manipulation of the table's *metad
 In the simplest form, this metadata can be the labels for table headings, but can also be as sophisticated as the header of a FITS file.
 
 Once data is created or read, one often wants to see the data displayed graphically.
-The *PlotSprite* created for normal *Snap!* can be used for this purpose, but *SciSnap!* has imbedded *PlotSprite* into the set of "Pad" tools (like the "GraphPad" and "ImagePad"), which makes it even easier to create plots of data.
+The **PlotSprite** created for normal *Snap!* can be used for this purpose, but *SciSnap!* has imbedded **PlotSprite** into the set of "Pad" tools (like the "GraphPad" and "ImagePad"), which makes it even easier to create plots of data.
 
 Here, we will create a simulation of the dynamic monitoring and display of weather data.
 The data will be artificially created, but with a corresponding URL to a real weather station, the project could just as easily be used to collect and display real data.
@@ -39,14 +39,14 @@ Every time we record the temperature, we only have to add a list containing the 
 
 ![simple data](./images/simple_data.png)
 
-In order to display this data, we need only add the *PlotPad* block
+In order to display this data, we need only add the *PlotPad* block that needs our data, the position and size of the plot on the *Snap!* **Stage**, optional axis labels and title, and the selection of markers, lines and their colours.
 
 ![simple plot](./images/simple_plot.png)
 
 Note that each time the weather data is collected, a new plot is created dynamically.
 
 
-** A more realistic weather report
+## A more realistic weather report
 
 While the previous example enabled us to create a dynamic report, the data were too simplistic: real weather stations provide much more detailed information and the running time is generally of little use.
 Let's create a realistic weather report including the actual date and time the data were taken, and at least two weather measurements, say the temperature and pressure ("Temperatur" and "Druck").
@@ -79,9 +79,9 @@ The conversion of a datetime to the fractional number of hours, minutes or secon
 If you want to go back to the running time but this time using the table data, simply create a variable holding the beginning time (e.g. in minutes that day) and subtract that time within the "map" block.
 
 
-## A more detailed report
+## Improve your weatherstation report
 
-Your weather station reports more than just the temperature, and *SciSnap!* lets you create more than one *PlotPad* *Sprite* : by creating several plots spaced and sized appropriately, you can display all of your weather data all at once.
+Your weather station reports more than just the temperature, and *SciSnap!* lets you create more than one *PlotPad* **Sprite** : by creating several plots spaced and sized appropriately, you can display all of your weather data all at once.
 
 
 ---
