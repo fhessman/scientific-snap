@@ -28,11 +28,23 @@ Given *Snap!*'s present internal structure, these goals could only be met by bre
 
 ## Installation
 
-There is no real installation needed, other than the use of the *SciSnap!* configuration Sprite.
-1. Load the latest version of *Snap!* into your browser.
-2. Download the *SciSnap!* configuration *Sprite* (e.g. from here).
-3. Click on the *Sprite* or invoke the "green flag" broadcast.
-...
+Download the zip file containing *SciSnap!* from http://www.emu-online.de/SciSnap.zip.
+This file contains all of the libaries (in the form of *Snap!* XML files) and a short description of how to install them (<tt>StartingSciSnap!.pdf</tt>).
+
+There is no real installation needed:
+1. Load the latest version of *Snap!* into your browser, e.g. from https://snap.berkeley.edu/snap/snap.html
+2. Drag the <tt>SciSnap!-starter.xml</tt> file from the *SciSnap!* folder to the *Snap!* window (or import from the menu).
+3. Click on the *Sprite* or invoke the "green flag" broadcast; this will open the file dialogue.
+4. Import the *SciSnap!* libraries you need (or import all at once with the <tt>SciSnap!AllLibraries.xml</tt> file).
+
+You are now ready to start!  When you save your *SciSnap!* project and read it back in again, all of this configuration will be restored.  WARNING: if you start a normal *Snap!* project, all of the *SciSnap!* content will be removed and you will have to start again by reading in the <tt>SciSnap!-Starter.xml</tt> project.
+
+
+---
+
+## Documentation
+
+Modrow's extensive introduction to *SciSnap!* is available at http://www.emu-online.de/ProgrammingWithSciSnap.pdf (English) and http://www.emu-online.de/ProgrammierenMitSciSnap.pdf (German).  He gives detailed examples from all of the new *SciSnap!* categories.
 
 
 ---
@@ -47,11 +59,11 @@ In the standard *SciSnap!* configuration there are additions to the standard cat
 
 ### Looks
 
-Here are the blocks for manipulating categories:
+Here are the blocks for manipulating *Snap!* categories:
 - setting up *SciSnap!*;
 - adding new categories;
 - hiding (old) categories;
-- importing libraries to categories.
+- importing libraries to particular categories.
 
 The most important new block here is the ![Switch to SciSnap!](./images/Switch_to_SciSnap.png) block needed to re-configure normal *Snap!* into *SciSnap!*.
 
