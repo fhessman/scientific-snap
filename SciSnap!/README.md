@@ -24,6 +24,8 @@ Given *Snap!*'s present internal structure, these goals could only be met by bre
 1. a configuration stage, where the basic libraries needed for a particular project are collected (other ones can be added later - see below); this configuration is saved as a normal *Snap!* project and can be passed on, e.g. by a teacher to her students.
 2. the initial configuration is then loaded again, whereby the user interface is modified/re-organized slightly, e.g. by removing/renaming/re-organizing the block palletes to make it easier to find the blocks used later and removing the normal need to slowly collect a range of libraries.
 
+---
+
 ## Installation
 
 There is no real installation needed, other than the use of the *SciSnap!* configuration Sprite.
@@ -33,11 +35,15 @@ There is no real installation needed, other than the use of the *SciSnap!* confi
 ...
 
 
+---
+
 ## The SciSnap! Categories
 
 With *SciSnap!*, it is possible to extend the pallette of categories beyond those in normal *Snap!* ("Motion", "Looks", "Sound", "Pen", "Control", "Sensing", "Operators", and "Variables").
 In the standard *SciSnap!* configuration there are additions to the standard catagories as well as fuly new ones:
 
+
+---
 
 ### Looks
 
@@ -49,6 +55,8 @@ Here are the blocks for manipulating categories:
 
 The most important new block here is the ![Switch to SciSnap!](./images/Switch_to_SciSnap.png) block needed to re-configure normal *Snap!* into *SciSnap!*.
 
+
+---
 
 ### Math
 
@@ -63,9 +71,13 @@ This category contains a wide range of standard mathematical functions and objec
 - root finding;
 - statistical distribution functions.
 
+---
+
 ### Plotpad
 
 This is the *SciSnap!* version of the scientific-snap *PlotSprite*.
+
+---
 
 ### Imagepad
 
@@ -77,21 +89,25 @@ This is the *SciSnap!* version of the scientific-snap *PlotSprite*.
 - support for different image file formats;
 - support for simple FITS images (astronomical standard) with metadata.
 
+---
 
 ### Sql
 
 This category replaces Modrow's specialized SQL-version of *Snap!* and offers a full set of SQL functionality for accessing local or network databases.
 
+---
 
 ### Control
 
 Some *Sprite* manipulation blocks.
 
+---
 
 ### Sensing
 
 The ![datetime](../images/datetime.png) function that returns the current datetime in ISO format: a string containing both the date and time in the format YYYY-MM-DDThh:mm:ss
 
+---
 
 ### Operators
 
@@ -103,6 +119,7 @@ A variety of new operator functions and constants are contained here:
 - writing text to files;
 - convertion of datetimes to fractional hours, minutes, or seconds of the given day.
 
+---
 
 ### Data
 
@@ -114,6 +131,7 @@ Included are such advanced things as
 - convolution.
 - regression;
 
+---
 
 ### Graphpad
 
@@ -123,11 +141,13 @@ Such connections are used to represent networks and  hierarchies of connections.
 The "pad" part means that there are tools for representing such networks graphically as
 geometric objects connected by lines.
 
+---
 
 ### Nnpad
 
 The "Nnpad" category stands for "Neural-network pad" and provides block by which simple neural networks can be constructed, trained, used, and displayed.
 
+---
 
 ### Myblocks
 
