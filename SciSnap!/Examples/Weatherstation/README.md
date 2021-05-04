@@ -87,10 +87,14 @@ Our weatherstation **Sprite** is now finished.  What is left is to have other **
 ## A Sprite to display the weather
 
 Given that the weather data has been placed in a public table, **SciSnap!Data**, any **Sprite** that wants to display a subset of the current data simply has to loop forever, grabbing the current data now and then, and producing a plot of the results.
-With *SciSnap!*'s **Plotpad**, this is _really_ easy: 
+Since each displaying *Sprite* needs to access different parts of the table, we can use **SciSnap!**'s ![columns of from row to](./images/columns_of_from_row_to.png) to extract the two columns we want by name:
+
+![columns_Zeit_Temperatur of SciSnapData](./images/columns_Zeit_Temperatur_of_SciSnapData.png)
+
+With *SciSnap!*'s **Plotpad**, this is now _really_ easy: 
 - Create a new **Sprite** for displaying, say, the temperature.
 - When the green flag broadcast is made, have it loop forever.
-- Within the loop, wait a while for the next weather report, then invoke a SIMPLE PLOT.
+- Within the loop, wait a while for the next weather report, then invoke a SIMPLE PLOT using the weatherstation data columns extracted by their labels.
 
 If you want to show the temperature and pressure simultaneously, simply create another **Sprite** and have it plot a different column.  By positioning the two **Sprite**s, you can then fill the **Stage** with dynamic weather information.
 
@@ -99,12 +103,12 @@ If you want to show the temperature and pressure simultaneously, simply create a
 
 If your simulation runs for a long time, the table of data will get bigger and bigger.
 In order to avoid running out of computer memory, you may want to limit the number of rows in your weatherstation's table.
-While you could simply overwrite the table by starting all over again, the resulting plot would have a jump in it.
-A better method is to delete the oldest entry before added the next one:
+While you could simply overwrite the table by starting all over again, you would have to keep track of where you are overwriting and the resulting plot would have a jump in it.
+A better method is to delete the oldest entry before adding the next one:
 
 ![delete row 2](./images/delete_row_2.png)
 
-Note that the 1st data entry is actually in row \#2 (the labels are in row \#1).
+Note that the oldest data entry is actually in row \#2 (the labels are in row \#1).
 
 Rather than putting in a plottable column in the weatherstation table, one can have the displaying sprites make the conversion.
 This is easily done using *Snap!*'s map function: ![map](./images/map.png).
