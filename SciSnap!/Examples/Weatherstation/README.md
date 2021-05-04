@@ -91,6 +91,8 @@ Since each displaying *Sprite* needs to access different parts of the table, we 
 
 ![columns_Zeit_Temperatur of SciSnapData](./images/columns_Zeit_Temperatur_of_SciSnapData.png)
 
+Here, we extract starting at row 2 because the column labels don't contain any data, just the labels.
+
 With *SciSnap!*'s **Plotpad**, this is now _really_ easy: 
 - Create a new **Sprite** for displaying, say, the temperature.
 - When the green flag broadcast is made, have it loop forever.
