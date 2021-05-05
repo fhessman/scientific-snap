@@ -101,7 +101,7 @@ With *SciSnap!*'s **Plotpad**, this is now _really_ easy:
 If you want to show the temperature and pressure simultaneously, simply create another **Sprite** and have it plot a different column.  By positioning the two **Sprite**s, you can then fill the **Stage** with dynamic weather information.
 
 
-## Improve your weatherstation report
+## Your weatherstation table getting too big?
 
 If your simulation runs for a long time, the table of data will get bigger and bigger.
 In order to avoid running out of computer memory, you may want to limit the number of rows in your weatherstation's table.
@@ -112,11 +112,11 @@ A better method is to delete the oldest entry before adding the next one:
 
 Note that the oldest data entry is actually in row \#2 (the labels are in row \#1).
 
+
+## Let your display *Sprite*s worry about extracting the time
+
 Rather than putting in a plottable column in the weatherstation table, one can have the displaying sprites make the conversion.
-This is easily done using *Snap!*'s map function: ![map](./images/map.png).
-Map takes as input a list and iteratively does some operation on each sub-list, in our case each row of our table.
+This is easily done using *Snap!*'s "mapping" function: ![map over](./images/map_over.png).
+When mapping, some operation is performed on each content of the input list, in our case each row of our table.
 
 
----
-
-2021-05-03T09:12:30 FVH
