@@ -2,6 +2,7 @@
 
 This page was for the first PlotSprite that eventually evolved into the Sprite now built into the SciSnap! library within the official distribution of Snap!, called "PlotPad".  Thus, the following information is kept for documentation purposes only: load the standard distribution of SciSnap! and you'll automatically get access to the newest plotting Sprite.
 
+The syntax of PlotPad is nearly identical to PlotSprite, so the examples below are easily adapted to the new library.  Enjoy!
 
 ---
 
