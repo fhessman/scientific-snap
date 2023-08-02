@@ -20,25 +20,7 @@ The goals were
 - to make the environment so configurable that it is more easily used within a high school or undergraduate teaching environment.
 The result was named "SciSnap!", or "Scientific Snap!".
 
-Given *Snap!*'s present internal structure, these goals could only be met by breaking the creation of a new project into two stages:
-1. a configuration stage, where the basic libraries needed for a particular project are collected (other ones can be added later - see below); this configuration is saved as a normal *Snap!* project and can be passed on, e.g. by a teacher to her students.
-2. the initial configuration is then loaded again, whereby the user interface is modified/re-organized slightly, e.g. by removing/renaming/re-organizing the block palletes to make it easier to find the blocks used later and removing the normal need to slowly collect a range of libraries.
-
----
-
-## Installation
-
-Download the zip file containing *SciSnap!* from http://www.emu-online.de/SciSnap.zip.
-This file contains all of the libaries (in the form of *Snap!* XML files) and a short description of how to install them (<tt>StartingSciSnap!.pdf</tt>).
-
-There is no real installation needed:
-1. Load the latest version of *Snap!* into your browser, e.g. from https://snap.berkeley.edu/snap/snap.html
-2. Drag the <tt>SciSnap!-starter.xml</tt> file from the *SciSnap!* folder to the *Snap!* window (or import from the menu).
-3. Click on the *Sprite* or invoke the "green flag" broadcast; this will open the file dialogue.
-4. Import the *SciSnap!* libraries you need (or import all at once with the <tt>SciSnap!AllLibraries.xml</tt> file).
-
-You are now ready to start!  When you save your *SciSnap!* project and read it back in again, all of this configuration will be restored.  WARNING: if you start a normal *Snap!* project, all of the *SciSnap!* content will be removed and you will have to start again by reading in the <tt>SciSnap!-Starter.xml</tt> project.
-
+SciSnap! is now an official library that can be loaded directly using the "Import" menu.
 
 ---
 
@@ -57,20 +39,19 @@ In the standard *SciSnap!* configuration there are additions to the standard cat
 
 ---
 
-### Looks
+### 0. My own blocks
 
-Here are the blocks for manipulating *Snap!* categories:
-- setting up *SciSnap!*;
-- adding new categories;
-- hiding (old) categories;
-- importing libraries to particular categories.
-
-The most important new block here is the ![Switch to SciSnap!](./images/Switch_to_SciSnap.png) block needed to re-configure normal *Snap!* into *SciSnap!*.
-
+This is a category area for your own blocks, which makes them easier to find than when they are spread out all over the other categories.
 
 ---
 
-### Math
+### 1. SciSnap! globals
+
+This category is usually only needed to start the SciSnap! environment using the "start SciSnap!" block.
+
+---
+
+### 2. Math tools
 
 This category contains a wide range of standard mathematical functions and objects, from relatively simple things found in high school mathematics to more advanced things found in undergraduate topics: e.g.
 - sets;
@@ -85,13 +66,25 @@ This category contains a wide range of standard mathematical functions and objec
 
 ---
 
-### Plotpad
+### 3. Data tools
 
-This is the *SciSnap!* version of the scientific-snap *PlotSprite*.
+These block are similar to those found in the "Variables" category" but are more powerful: these blocks create and manipulate tables of data.
 
 ---
 
-### Imagepad
+### 4. SQL tools
+
+These block can be used to perform formal database operations, just like in the professional world - as long as you have a connection to a server!
+
+---
+
+### 5. Plotpad for data plots
+
+This is the *SciSnap!* version of the old scientific-snap *PlotSprite*, used to create x-y plots and histograms of data.
+
+---
+
+### 6. ImagePad for image operations
 
 *Imagepad* offers a range of image processing and drawing functions:
 - pixel arithmetic;
@@ -103,49 +96,7 @@ This is the *SciSnap!* version of the scientific-snap *PlotSprite*.
 
 ---
 
-### Sql
-
-This category replaces Modrow's specialized SQL-version of *Snap!* and offers a full set of SQL functionality for accessing local or network databases.
-
----
-
-### Control
-
-Some *Sprite* manipulation blocks.
-
----
-
-### Sensing
-
-The ![datetime](../images/datetime.png) function that returns the current datetime in ISO format: a string containing both the date and time in the format YYYY-MM-DDThh:mm:ss
-
----
-
-### Operators
-
-A variety of new operator functions and constants are contained here:
-- important numerical constants like "pi" and "e";
-- mathematical functions like factoral, binomial coefficients, and a random number generator (0 to 1);
-- a handy function for rounding decimal numbers;
-- string manipulations;
-- writing text to files;
-- convertion of datetimes to fractional hours, minutes, or seconds of the given day.
-
----
-
-### Data
-
-Here are a large number of blocks that enabe the creation and manipulation of tabular data, with or without metadata (column/row labels).
-Included are such advanced things as 
-- grouping data;
-- statistics;
-- sorting;
-- convolution.
-- regression;
-
----
-
-### Graphpad
+### 7. GraphPad for graph operations
 
 Here, "Graph" means graphs in the sense of mathematical graph theory.
 These are blocks that manipulate the connections between objects.
@@ -155,13 +106,6 @@ geometric objects connected by lines.
 
 ---
 
-### Nnpad
+### 8. NNPad for neural networks
 
-The "Nnpad" category stands for "Neural-network pad" and provides block by which simple neural networks can be constructed, trained, used, and displayed.
-
----
-
-### Myblocks
-
-This empty category with the traditional gray color is for your own blocks, so that it is easier to find them without having to pour through dozens of standard blocks.
-
+The "NNPad" category stands for "Neural-network pad" and provides block by which simple neural networks can be constructed, trained, used, and displayed.
