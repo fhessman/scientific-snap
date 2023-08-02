@@ -1,5 +1,11 @@
 # <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="70"/> PlotSprite (v0.3)
 
+This is the first PlotSprite that eventually evolved into the Sprite now built into the SciSnap! library within the official distribution of Snap!  Thus, the following information is kept for documentation purposes only: load the standard distribution of SciSnap! and you'll automatically get access to the newest PlotSprite, now called a "PlotPad".
+
+---
+
+## Old Introduction
+
 One of the foundations of *Snap!*, like *Scratch*, is the *Logo*-like use of "turtle graphics" - simple pen-based drawing.  However, there is no generic means of displaying data graphically as a formal plot, something which is often needed when using *Snap!* for scientific or mathematical purposes.
 
 The scientific-snap [PlotSprite](./PlotSprite.xml) displays data that is in the form of a table, often simple lists of (x,y) data pairs, and can also display histograms and functions of the x-axis.
@@ -12,7 +18,7 @@ The changes from v0.2 are:
 
 ---
 
-## Example
+## Old Example
 
 As an example, let's create a simple set of (x,y) data that we would like to have plotted. After defining a global "xydata" variable, pressing the following blocks
 
@@ -38,7 +44,7 @@ The disadvantage of the "tell ..." form is that the executing *Sprite* must be s
 
 ---
 
-## Plotting Histograms
+## Old Plotting Histograms Example
 
 *PlotSprite* will also produce histograms of values.  Since our "xydata" is a table, we need to extract just one column using the ![columns of table](./images/columns_of_table.png) block: if the second column argument is blank, only a single column will be returned.  The resulting *PlotSprite* script responding to a "plot histogram" broadcast
 
@@ -59,7 +65,7 @@ This form is obviously much more cumbersome because of the separation of the blo
 
 ---
 
-## Plotting by Hand
+## Old Plotting by Hand Info
 
 To see how plotting works, let's do all of the work by hand.  This way we can configure the plot to have many different properties and appearances, at the price of doing a lot more work.
 
