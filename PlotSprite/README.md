@@ -1,6 +1,7 @@
-# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="70"/> PlotSprite (v0.3)
+# <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="70"/> PlotSprite is now PlotPad! (SciSnap! Version 2)
 
-This is the first PlotSprite that eventually evolved into the Sprite now built into the SciSnap! library within the official distribution of Snap!  Thus, the following information is kept for documentation purposes only: load the standard distribution of SciSnap! and you'll automatically get access to the newest PlotSprite, now called a "PlotPad".
+This page was for the first PlotSprite that eventually evolved into the Sprite now built into the SciSnap! library within the official distribution of Snap!, called "PlotPad".  Thus, the following information is kept for documentation purposes only: load the standard distribution of SciSnap! and you'll automatically get access to the newest plotting Sprite.
+
 
 ---
 
