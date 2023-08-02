@@ -4,7 +4,7 @@ This is the old pre-SciSnap! information used to permit the stage brightness to 
 
 ![SciSnap! block for measuring the stage brightness](../images/brightness.png)
 
-The rest of the information about the original brightness block is kept here for documentation purpoese.
+The rest of the information about the original brightness block is kept here for documentation purposes.
 
 ---
 
