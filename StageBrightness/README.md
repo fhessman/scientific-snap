@@ -1,5 +1,13 @@
 # <img alt="scientific-snap-icon" src="../images/einstein_snap.png" width="50"/> Stage Brightness
 
+This is the old pre-SciSnap! information used to permit the stage brightness to be measured.  This functionality is now contained within the SciSnap! block
+
+<img href="images/brightness.png" alt="SciSnap! block for measuring the stage brightness"/>
+
+The rest of the information about the original brightness block is kept here for documentation purpoese.
+
+---
+
 There are many examples of scientific phenomenon which cannot be seen directly, but only via the observation of some indirect measure.  For example, in astrophysics, most stellar phenomena are not directly visible simply because the stars are so far away - one can only observe the amount of light coming from them. *Snap!*'s graphical capabilities makes it simple to create simulations of what is going on but cannot be seen directly, so one merely needs to be able to "observe" what is happening in total on the *Stage* - one needs to convert the *Stage* into one giant pixel.  The result is the current average "brightness" or "colour" of the *Stage*, normalized to the brightness or colour of a typical 8-bit pixel, which has values between 0 and 255.
 
 The [stage\_brightness.xml](./stage_brightness.xml) "sensing" blocks read some sub-image of the *Stage* and converts the pixel values into either a mean gray value
