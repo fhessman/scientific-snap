@@ -2,7 +2,7 @@
 
 This is the old pre-SciSnap! information used to permit the stage brightness to be measured.  This functionality is now contained within the SciSnap! block
 
-<img href="../images/brightness.png" alt="SciSnap! block for measuring the stage brightness"/>
+![SciSnap! block for measuring the stage brightness](../images/brightness.png)
 
 The rest of the information about the original brightness block is kept here for documentation purpoese.
 
