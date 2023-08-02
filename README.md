@@ -20,13 +20,13 @@ There is practically no installation! Use the standard Snap! link to start the S
 
 If you want to plot your simulation results as a scientific plot, you can either use the old PlotSprite available here or - much better - you can simply use the built-in library called "SciSnap!".  Either way, you then need to turn on the "JavaScript Extensions" (sometimes vanilla Snap! simply isn't fast enough): 
 
-<img alt="turn on javascript extensions" src="./images/javascript_extensions.png" width="75"/>
+<img alt="turn on javascript extensions" src="./images/javascript_extensions.png" width="300"/>
 
 You can load the "SciSnap!" libraries by looking for it in the official list of Snap! libraries:
 
-<img alt="load a Snap! library" src="./images/Snap_libraries.png" width="75"/>
+<img alt="load a Snap! library" src="./images/Snap_libraries.png" width="300"/>
 
 and then scrolling down to near the bottom:
 
-<img alt="load the SciSnap! library" src="./images/SciSnap_blocks.png" width="75"/>
+<img alt="load the SciSnap! library" src="./images/SciSnap_blocks.png" width="400"/>
 
