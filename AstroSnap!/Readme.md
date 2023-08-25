@@ -14,4 +14,30 @@ E. Modrow and F.V. Hessman (2023-AUG-25)
 
 ---
 
+## Installation
+
+Download the XML file to your computer and read it into Snap!
+
+Enable javascript in Snap!'s configuration menu.
+
+Press the green flag to start.
+
+Help is available for all of the tools shown in the menu bar on the left.  More detailed info is available by shift-clicking the icon of interest.
+
+---
+
+## How to Use
+
+This version of AstroSnap! is for aperture photometry of astronomical images.  "Aperture Photometry" is a way of measuring the brightness of objects in images that have stars of different sizes and background light (e.g. due to clouds or moonlight) that vary.  The idea is that one defines a circle within which the light of the object is contained and an annulus around the circle that only contains the background light.  A measurement is made when the background level is measured, subtracted from the inner circle, and the brightness of all of the pixels in the inner circle is added up : this is the brightness of the object.
+
+A simple photometry measurement is thus made by
+* reading in a local FITS image file
+* setting the aperture radii (inner radius for the object, two outer radii defining the background), e.g. with the help of the line tool that shows the values in the image along a line segment
+* clicking on the image with the "Photometry Tool" to place an aperture
+* shift-clicking the tab on the aperture or pressing the <SPACE> bar
+* the aperture shows the object brightness, the background per pixel, and the position of the aperture.
+
+By using multiple apertures, one can do relative photometry, either to compare the brightness of different objects or to correct for the brightness variations produced, e.g., by clouds.
+
+In the "Stack" mode, all of the apertures are measured for a list of images, making it very easy to measure the relative brightness of an object versus the other objects, automatically correcting the brightness within an image for any variations common to all apertures.
 
