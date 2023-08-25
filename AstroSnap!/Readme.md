@@ -51,8 +51,7 @@ In the "Stack" mode, all of the apertures are measured for a list of images, mak
 
 ## Test Data
 
-A set of exoplanet transit test data kindly provided by Dr. Karen Collins is available [here](http://www.astro.physik.uni-goettingen.de/~hessman/ImageJ/Book/Transits%20of%20Exoplanets/transit_data.zip).
+A set of exoplanet transit test data kindly provided by Dr. Karen Collins is available [here](https://www.astro.physik.uni-goettingen.de/~hessman/ImageJ/Book/Transits%20of%20Exoplanets/transit_data.zip).
 
 The images of the exoplanetary system WASP 24 were taken through a red filter with the 24-inch telescope of the University of Louisville, Kentucky. The original data was calibrated (subtraction of dark-current, division by a flat-field) and the region of interest was extracted from the original 4096x4096 images.
-
 
