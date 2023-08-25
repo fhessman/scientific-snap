@@ -16,8 +16,10 @@ E. Modrow and F.V. Hessman (2023-AUG-25)
 
 ## Installation
 
-Download the XML file to your computer and read it into Snap!
-
+Either
+* Download the XML file stored here to your computer and read it into Snap!
+* Load it directly via the Snap! Cloud (you'll need a Snap! cloud account; simply search for "AstroSnap")
+  
 Enable javascript in Snap!'s configuration menu.
 
 Press the green flag to start.
