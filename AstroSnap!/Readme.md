@@ -1,1 +1,17 @@
-asdfadsf
+# <img alt="scientific-snap icon" src="../images/einstein_snap.png" width="75"/> AstroSnap!
+
+## Motivation
+
+With (Sci)Snap!, it is very easy to create scientific simulations.  However, the scientific process is two-fold:  progress is made by combining experiment with theory, i.e. observations with models.  Making, reducing/calibrating/measuring and interpreting observations is just as important as creating simulations.  Thus, we need tools to process data so that we can run experiments that need to be modeled.
+
+In astronomy, practically all data is in the form of images, so astronomical experiments are measurements made within images via image processing.  This is true whether one is doing photometry (measuring the brightness of objects), time-resolved photometry (following the brightness of objects over time) like exoplanet transits, discovering changes in the universe like supernovae (via image subtraction), astrometry (very precise position measurements on the sky) like measuring the motions of asteroids in our Solar System , or many other experiments.
+
+There is now a long list of applications that have been designed to help do astronomical experiments within a school environment.  The "grandparent" of all is the Hands-On Universe (c) Windows-based App developed during the 1990's: despite it's many limitations, it provided all that was needed to perform a long list of astronomical experiments with a minimum of software distractions, combined with an extensive and tested curriculum.  Later, better software solutions were created, notably those using the puboic domain ImageJ image processing app as a basis: ImageJ with the Göttingen plugins (later extended to become AstroImageJ, a professional standard), and SalsaJ as a simplified ImageJ version re-designed for schools.  The problem with these apps is that they must be installed in a school's network, something which is difficult for most schools for security reasons.  Now, browser-based solutions are appearing like JS9 that don't have to be installed.  However, browser-apps like JS9 are not designed for schools.
+
+Because we felt a need for a simple browser-based app for doing simple astronomical image processing and because we thought it would be fun to attempt such a project within the Snap! programming environment, we created AstroSnap!.  AstroSnap! is a Snap!-application designed to do simple photometry and time-resolved photometry within astronomical images.  Of course, Snap! isn't intended to be a software environment for developing state-of-the-art apps - you're supposed to have fun and not use it for professional purposes - so the performance is not that of an optimized app.  However, it works quite well, is easy to use, and anyone even superficially familar with Snap! as a programming language can easily see how it works (something that rarely can be said for javascript apps).
+
+E. Modrow and F.V. Hessman (2023-AUG-25)
+
+---
+
+
