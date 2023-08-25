@@ -16,9 +16,11 @@ E. Modrow and F.V. Hessman (2023-AUG-25)
 
 ## Installation
 
+Start [Snap!](https://snap.berkeley.edu/).
+
 Either
-* Download the XML file stored here to your computer and read it into Snap!
-* Load it directly via the Snap! Cloud (you'll need a Snap! cloud account; simply search for "AstroSnap")
+* Download the XML file stored here to your computer and read it into Snap! via the "File > Open..." menu, searching your local computer, or
+* Load it directly via the Snap! Cloud (you'll need an account). Select the "File > Open..." menu and search for "AstroSnap" in the Snap! Cloud.
   
 Enable javascript in Snap!'s configuration menu.
 
