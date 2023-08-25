@@ -33,7 +33,7 @@ Help is available for all of the tools shown in the menu bar on the left.  More 
 This version of AstroSnap! is for aperture photometry of astronomical images.  "Aperture Photometry" is a way of measuring the brightness of objects in images that have stars of different sizes and background light (e.g. due to clouds or moonlight) that vary.  The idea is that one defines a circle within which the light of the object is contained and an annulus around the circle that only contains the background light.  A measurement is made when the background level is measured, subtracted from the inner circle, and the brightness of all of the pixels in the inner circle is added up : this is the brightness of the object.
 
 A simple photometry measurement is thus made by
-* reading in a local FITS image file
+* reading in a local FITS image file (input via a URL hopefully soon)
 * setting the aperture radii (inner radius for the object, two outer radii defining the background), e.g. with the help of the line tool that shows the values in the image along a line segment
 * clicking on the image with the "Photometry Tool" to place an aperture
 * shift-clicking the tab on the aperture or pressing the <SPACE> bar
