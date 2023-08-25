@@ -26,6 +26,8 @@ Press the green flag to start.
 
 Help is available for all of the tools shown in the menu bar on the left.  More detailed info is available by shift-clicking the icon of interest.
 
+You can select a different language via the configuration tool : presently, a wide variety of languages is supported (e.g. Bulgarian, Czech, Danish, English, French, Hungarian, Italian, Portuguese, Spanish, Swedish, Ukranian) and more will be available soon.  Then all of the text, including the labeling of the results table, is translated into the configured language.
+
 ---
 
 ## How to Use
