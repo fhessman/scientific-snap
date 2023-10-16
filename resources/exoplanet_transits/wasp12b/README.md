@@ -1,1 +1,2 @@
-This is a set of images of the exoplent system Wasp-12b collected by Karen Collins on the Univ. of Louisville's 60cm  telescope and kindly provided for educational purposes. 
+This is a set of images of the exoplent system Wasp-12b collected by Karen Collins and kindly provided for educational purposes. 
+The images were taken through a red filter with the 24-inch telescope of the University of Louisville, Kentucky. The original data was calibrated (subtraction of dark-current, division by a flat-field) and the region of interest was extracted from the original 4096x4096 images.
