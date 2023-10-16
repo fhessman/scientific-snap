@@ -1,3 +1,5 @@
+<img alt="scientific-snap icon" src="../../images/einstein_snap.png" width="75"/> Scientific Snap! Resources : Einstein's Theory of General Relativity
+
 The effects of Einstein's Theory of General Relativity (GR) are usually only measureable in a laboratory situation using very precise instruments (eg. atomic clocks).
 Astronomically, the effects are much larger due to the larger masses involved.
 
