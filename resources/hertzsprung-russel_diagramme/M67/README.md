@@ -1,3 +1,5 @@
+# <img alt="scientific-snap icon" src="../../../images/einstein_snap.png" width="75"/> Scientific Snap! Resources : M67
+
 Here are 3 images of the open cluster Messier 67 taken at the ESO observatory at La Silla through 3 different filters:  "B" is in blue light, "V" in "visual" or green light, and "R" in red light.  The finder chart shows 6 stars for which the temperature is known: this can be used to calibrate the relationship between photometric colour (e.g. the measured ratio of blue to red light).  Also included are the classical astronomical "magnitudes" (a logarithmic measure of brightness where larger numbers mean smaller brightnesses and ratios turn into arithmetic differences - yuk!).
 
 | Finder Chart ID | Star | Temperature [K] | B-Magn. | V-Magn. | B-V Colour |
